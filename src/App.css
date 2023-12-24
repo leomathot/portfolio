@@ -4,6 +4,41 @@
 
   --black: #202020;
   --white: #fcfcfc;
+  --gray-1: #ddd;
+  --gray-2: #bbb;
+  
+  letter-spacing: 0.05rem;
+}
+
+.hero {
+  background: var(--black);
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero i {
+  font-size: 1.3rem;
+  margin-right: 0.4rem;
+}
+
+.hero:hover span {
+  color: var(--white);
+}
+
+h1 {
+  color: #0df;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--gray-2);
+  margin-left: 1.8rem;
 }
 
 a {
@@ -21,8 +56,9 @@ ul {
 }
 
 .nav {
-  background-color: rgba(0,0,0,0.1);
+  background: rgba(0,0,0,0.1);
   display: flex;
+  gap: 10px;
   justify-content: space-between;
   padding: 10px;
 }
@@ -31,3 +67,4 @@ ul {
   display: flex;
   gap: 10px;
 }
+
