@@ -1,0 +1,34 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+
+  --black: #202020;
+  --white: #fcfcfc;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--black)
+}
+
+ul {
+  list-style: none;
+  text-align: left;
+}
+
+.nav {
+  background-color: rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.nav ul {
+  display: flex;
+  gap: 10px;
+}
