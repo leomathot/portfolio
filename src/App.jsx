@@ -15,10 +15,10 @@ function App() {
       <NavBar />
 
       <Routes>
-        <Route exact path='/' component={<PageHome/>}/>
-        <Route exact path='/about' component={<PageAbout/>}/>
-        <Route exact path='/projects' component={<PageProjects/>}/>
-        <Route exact path='/contact' component={<PageContact/>}/>
+        <Route path='/' element={<PageHome/>}/>
+        <Route path='/about' element={<PageAbout/>}/>
+        <Route path='/projects' element={<PageProjects/>}/>
+        <Route path='/contact' element={<PageContact/>}/>
       </Routes>
 
     </BrowserRouter>

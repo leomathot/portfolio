@@ -2,7 +2,7 @@ import React from 'react'
 
 function PageProjects() {
   return (
-    <h1>PageProjects</h1>
+    <h1>Projects</h1>
   )
 }
 

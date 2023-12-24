@@ -1,8 +1,8 @@
 import React from 'react'
 
-function PageAbout() {
+const PageAbout = () => {
   return (
-    <h1>PageAbout</h1>
+    <h1>About</h1>
   )
 }
 

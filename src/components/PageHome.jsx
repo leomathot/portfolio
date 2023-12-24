@@ -2,7 +2,7 @@ import React from 'react'
 
 function PageHome() {
   return (
-    <h1>PageHome</h1>
+    <h1>Home</h1>
   )
 }
 
