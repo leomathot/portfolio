@@ -6,22 +6,85 @@
   --white: #fcfcfc;
   --gray-1: #ddd;
   --gray-2: #bbb;
+
+  --red-1: #d44;
+  --bright-blue: #0df;
+  --blue-1: #4090d0;
   
   letter-spacing: 0.05rem;
 }
 
 .hero {
-  background: var(--black);
   min-height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  background: 
+    linear-gradient(
+      rgba(0,0,0,0.1),
+      #101010
+    ),
+    linear-gradient(
+      90deg,
+      var(--black),
+      #184c58,
+      var(--black)
+    );
+}
+
+.background-move {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 500%;
+  z-index: -1;
+  background-image: url('/src/assets/images/code-bg.png');
+  opacity: 0.2;
+  /* background: 
+      repeating-linear-gradient(
+      65deg,
+      transparent,
+      transparent 15px,
+      rgba(0,0,0,0.05) 15px,
+      rgba(0,0,0,0.05) 20px
+      ), 
+      repeating-linear-gradient(
+      -65deg,
+      transparent,
+      transparent 15px,
+      rgba(0,0,0,0.05) 15px,
+      rgba(0,0,0,0.05) 20px
+      ); */
+  animation-name: movement;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes movement {
+  0%   {transform: translateY(0);}
+  100% {transform: translateY(1000px);}
 }
 
 .hero i {
+  color: var(--white);
   font-size: 1.3rem;
   margin-right: 0.4rem;
+}
+
+.hero:hover i {
+  color: var(--bright-blue);
 }
 
 .hero:hover span {
@@ -29,7 +92,7 @@
 }
 
 h1 {
-  color: #0df;
+  color: var(--bright-blue);
   font-weight: 400;
   margin-bottom: 10px;
 }
