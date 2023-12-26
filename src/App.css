@@ -163,14 +163,14 @@ ul {
   text-align: left;
 }
 
-.nav {
+.router-nav {
   display: flex;
   gap: 20px;
   justify-content: center;
   padding: 10px;
 }
 
-.nav ul {
+.router-nav ul {
   display: flex;
   gap: 20px;
 }
