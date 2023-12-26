@@ -1,12 +1,13 @@
 import { useState } from 'react'
 import './App.css'
 import Hero from './components/Hero'
-import NavBar from './components/NavBar'
+import RouterNavBar from './components/RouterNavBar'
 import PageHome from './components/PageHome'
 import PageAbout from './components/PageAbout'
 import PageProjects from './components/PageProjects'
 import PageContact from './components/PageContact'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import About from './components/About'
 
 function App() {
 
@@ -14,14 +15,14 @@ function App() {
     <BrowserRouter>
 
       <Hero/>
-
+      <About/>
       <div>
-        <NavBar />
+        <RouterNavBar />
         <Routes>
-          <Route path='/' element={<PageHome/>}/>
-          <Route path='/about' element={<PageAbout/>}/>
-          <Route path='/projects' element={<PageProjects/>}/>
-          <Route path='/contact' element={<PageContact/>}/>
+          <Route path='/page01' element={<PageHome/>}/>
+          <Route path='/page02' element={<PageAbout/>}/>
+          <Route path='/page03' element={<PageProjects/>}/>
+          <Route path='/page04' element={<PageContact/>}/>
         </Routes>
       </div>
 
