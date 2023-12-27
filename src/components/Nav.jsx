@@ -5,7 +5,7 @@ const Nav = () => {
     <nav className='nav'>
         <ul>
             <li>
-                <a href="#hero">About</a>
+                <a href="#about">About</a>
             </li>
             <li>
                 <a href="#projects">Projects</a>

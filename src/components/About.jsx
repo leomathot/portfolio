@@ -2,8 +2,8 @@ import React from 'react'
 
 const About = () => {
   return (
-    <div className='about max-width pt-5'>
-        <div className='one-two text-wrap'>
+    <div className='about-desc max-width min-h-[50vh]'>
+        <div className='one-two text-wrap pt-5'>
             <div>
                 <p>Switched from electrician to programmer. Committed to doing my best, I bring problem-solving skills and meticulous attention to detail.</p>
             </div>

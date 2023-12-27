@@ -2,7 +2,7 @@ import React from 'react'
 
 const Hero = () => {
   return (
-    <section id="hero" className='hero min-h-[50vh] flex justify-center align-bottom items-center'>
+    <section id="about" className='hero min-h-[50vh] flex justify-center align-bottom items-center'>
       <div class="bg-bottom"></div>
       <div class="bg-move-1"></div>
       <div class="bg-move-2"></div>
