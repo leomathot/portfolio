@@ -3,6 +3,7 @@
   width: 100%;
   
   letter-spacing: 0.05rem;
+  scroll-behavior: smooth;
 
   --black: #181818;
   --white: #fcfcfc;
@@ -16,10 +17,10 @@
 
 .hero {
   min-height: 50vh;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
   overflow: hidden;
   position: relative;
 }
@@ -53,16 +54,15 @@
     );
 }
 
-.bg-move {
+.bg-move-1, .bg-move-2 {
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 500%;
   z-index: -2;
-  background-image: url('/src/assets/images/code-2.png');
   opacity: 0.2;
+  background-position: center;
   animation-name: movement;
-  animation-duration: 10s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
@@ -70,6 +70,16 @@
 @keyframes movement {
   0%   {transform: translateY(0);}
   100% {transform: translateY(500px);}
+}
+
+.bg-move-1 {
+  background-image: url('/src/assets/images/code-1.png');
+  animation-duration: 10s;
+}
+
+.bg-move-2 {
+  background-image: url('/src/assets/images/code-2.png');
+  animation-duration: 8s;
 }
 
 .hero i {
@@ -94,7 +104,6 @@
 .hero h1 {
   color: var(--bright-blue);
   font-weight: 400;
-  margin-bottom: 10px;
   transition: all 5s;
 }
 
@@ -111,7 +120,7 @@
 
 .max-width {
   width: 95%;
-  max-width: 1000px;
+  max-width: 850px;
   margin: 0 auto;
 }
 
@@ -124,7 +133,7 @@
 .about {
   min-height: 50vh;
   text-align: center;
-  text-wrap: balance;
+  /* text-wrap: balance; */
 }
 
 .about p {
@@ -165,16 +174,22 @@ ul {
   text-align: left;
 }
 
-.router-nav {
+.router-nav, .nav {
   display: flex;
   gap: 20px;
   justify-content: center;
   padding: 10px;
 }
 
-.router-nav ul {
+.router-nav ul, .nav ul {
   display: flex;
   gap: 20px;
+}
+
+.nav {
+  background: var(--black);
+  position: sticky;
+  top: 0;
 }
 
 @media screen and (min-width: 650px) {

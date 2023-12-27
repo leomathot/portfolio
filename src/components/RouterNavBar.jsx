@@ -6,16 +6,10 @@ export default function RouterNavBar() {
         <nav className="router-nav">
             <ul>
                 <li>
-                    <Link to="/page01">home</Link>
+                    <Link to="/">Web</Link>
                 </li>
                 <li>
-                    <Link to="/page02">about</Link>
-                </li>
-                <li>
-                    <Link to="/page03">projects</Link>
-                </li>
-                <li>
-                    <Link to="/page04">contact</Link>
+                    <Link to="/2">Games</Link>
                 </li>
             </ul>
         </nav>
