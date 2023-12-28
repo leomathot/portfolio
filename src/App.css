@@ -30,19 +30,19 @@
     135deg,
     #407090,
     var(--black),
-    #407090
+    #605070
   );
   --proj-bg-2: linear-gradient(
     135deg,
     #508080,
     var(--black),
-    #508080
+    #407090
   );
   --proj-bg-3: linear-gradient(
     135deg,
     #605070,
     var(--black),
-    #605070
+    #508080
   );
 
 }

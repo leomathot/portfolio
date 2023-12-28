@@ -13,10 +13,10 @@ const Hero = () => {
 
             <h2 className='mb-4'>Front End Devoloper</h2>
 
-            <div className='text-cyan-400 flex gap-4'>
-              <i className="fa-brands fa-linkedin"></i>
-              <i className="fa-brands fa-github"></i>
-              <i className="fa-solid fa-envelope"></i>
+            <div className='text-[var(--gray-2)] flex gap-4'>
+              <i className="fa-brands fa-linkedin hover:text-cyan-400"></i>
+              <i className="fa-brands fa-github hover:text-cyan-400"></i>
+              <i className="fa-solid fa-envelope hover:text-cyan-400"></i>
             </div>
 
         </article>
