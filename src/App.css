@@ -1,18 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 5s;
+}
+
 :root {
-  margin: 0 auto;
-  width: 100%;
+  
+  background-color: #181818;
+  color: #fcfcfc;
+  font-family: 'Poppins', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   
   letter-spacing: 0.05rem;
   scroll-behavior: smooth;
 
   --black: #181818;
+  --black-2: #202020;
   --white: #fcfcfc;
   --gray-1: #ddd;
   --gray-2: #bbb;
 
   --red-1: #d44;
-  --bright-blue: #0df;
-  --blue-1: #4090d0;
+  --blue-bright: #0df;
+  --blue-1: #49d;
+  --green-1: #5b5;
+  --orange-1: #ea4;
+
+  --proj-bg-1: linear-gradient(
+    135deg,
+    #407090,
+    var(--black),
+    #407090
+  );
+  --proj-bg-2: linear-gradient(
+    135deg,
+    #508080,
+    var(--black),
+    #508080
+  );
+  --proj-bg-3: linear-gradient(
+    135deg,
+    #605070,
+    var(--black),
+    #605070
+  );
+
+}
+
+body {
+  min-height: 100vh;
 }
 
 .hero {
@@ -85,10 +126,6 @@
   transition: all 0.2s;
 }
 
-.hero:hover i {
-  color: var(--bright-blue);
-}
-
 .hero span {
   transition: all 0.2s;
 }
@@ -97,14 +134,8 @@
   color: var(--white);
 }
 
-.hero h1 {
-  color: var(--bright-blue);
-  font-weight: 400;
-  transition: all 5s;
-}
-
 .hero h2 {
-  font-weight: 600;
+  /* font-weight: 600; */
   font-size: 1rem;
   color: var(--gray-2);
   margin-left: 1.8rem;
@@ -116,22 +147,13 @@
 
 .max-width {
   width: 95%;
-  max-width: 850px;
+  max-width: 900px;
   margin: 0 auto;
-}
-
-.one-two {
-  display: grid;
-  column-gap: 5%;
-  row-gap: 40px;
 }
 
 .about-desc {
   text-align: center;
   color: var(--gray-1);
-}
-
-.about-desc p {
 }
 
 .about-desc > div:nth-of-type(2) i {
@@ -147,11 +169,15 @@ a {
   text-decoration: none;
 }
 
-.b600 {
+.fw400 {
+  font-weight: 400;
+}
+
+.fw600 {
   font-weight: 600;
 }
 
-.b700 {
+.fw700 {
   font-weight: 700;
 }
 
@@ -164,33 +190,11 @@ ul {
   text-align: left;
 }
 
-.router-nav, .nav {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  padding: 10px;
-}
-
-.router-nav ul, .nav ul {
-  display: flex;
-  gap: 20px;
-}
-
 .nav {
   background: var(--black);
   position: sticky;
-  top: 0;
+  top: -2px;
 }
 
 @media screen and (min-width: 650px) {
-  .one-two {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .about-desc > div:nth-of-type(1) > div:nth-of-type(1) {
-    text-align: right;
-  }
-  .about-desc > div:nth-of-type(1) > div:nth-of-type(2) {
-    text-align: left;
-  }
 }
