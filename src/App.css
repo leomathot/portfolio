@@ -167,11 +167,6 @@ ul {
   text-align: left;
 }
 
-.nav {
-  position: sticky;
-  top: -2px;
-}
-
 @media (prefers-reduced-motion: reduce) {
   :root {
     scroll-behavior: auto;
