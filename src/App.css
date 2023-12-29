@@ -15,13 +15,13 @@
   scroll-behavior: smooth;
 
   --black: #181818;
-  --black-2: #202020;
-  --white: #fcfcfc;
+  --white: #fafafa;
   --gray-1: #ddd;
   --gray-2: #bbb;
 
   --red-1: #d44;
   --blue-bright: #0df;
+  --cyan-400: #22d3ee;
   --blue-1: #49d;
   --green-1: #5b5;
   --orange-1: #ea4;
@@ -45,10 +45,6 @@
     #508080
   );
 
-}
-
-body {
-  min-height: 100vh;
 }
 
 .hero {
@@ -114,23 +110,16 @@ body {
   animation-duration: 8s;
 }
 
-.hero h1 i {
-  color: var(--white);
-  font-size: 1.3rem;
-  margin-right: 0.4rem;
-  transition: all 0.2s;
+.tran-200ms {
+  transition: all 0.5s;
 }
 
-.hero span {
-  transition: all 0.2s;
+.hero:hover h1 i {
+  color: rgb(34 211 238);
 }
 
 .hero:hover span {
   color: var(--white);
-}
-
-.hero h2 {
-  color: var(--gray-2);
 }
 
 .sect {
@@ -173,20 +162,18 @@ a {
   font-weight: 700;
 }
 
-a:hover {
-  color: var(--gray-2)
-}
-
 ul {
   list-style: none;
   text-align: left;
 }
 
 .nav {
-  background: var(--black);
   position: sticky;
   top: -2px;
 }
 
-@media screen and (min-width: 650px) {
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    scroll-behavior: auto;
+  }
 }

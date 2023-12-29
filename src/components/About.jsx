@@ -2,7 +2,7 @@ import React from 'react'
 
 const About = () => {
   return (
-    <div className='about-desc max-width min-h-[50vh] flex flex-col'>
+    <div className='about-desc max-width min-h-[40vh] flex flex-col'>
         <div className='grid md:grid-cols-2 gap-10 max-w-[850px] mx-auto pt-5'>
             <div className='md:text-right'>
                 <p>Switched from electrician to programmer. Committed to doing my best, I bring problem-solving skills and meticulous attention to detail.</p>
@@ -12,7 +12,7 @@ const About = () => {
             </div>
         </div>
         
-        <div className='flex justify-center gap-[7%] flex-wrap my-20 text-cyan-500'>
+        <div className='flex justify-center gap-[7%] flex-wrap my-20 text-cyan-600'>
 
             <i className="fa-brands fa-html5" title='HTML5'></i>
             <i className="fa-brands fa-css3-alt" title='CSS3'></i>

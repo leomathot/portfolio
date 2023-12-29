@@ -3,7 +3,7 @@ import Box from './Box'
 
 const Projects = () => {
   return (
-    <section id='projects' className='bg-[var(--black-2)] sect'>
+    <section id='projects' className='bg-[#202020] sect'>
       <div className='max-width'>
         <h2 className='mb-10'>Projects</h2>
         <div className='grid grid-cols-2 md:grid-cols-3 gap-4 py-1'>
@@ -14,7 +14,6 @@ const Projects = () => {
           <Box title='Project 05' color='2'/>
           <Box title='Project 06' color='3'/>
         </div>
-        <p>popop</p>
         </div>
     </section>
   )
