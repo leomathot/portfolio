@@ -12,7 +12,7 @@ const Nav = () => {
             setSticky('-2px');
           } else {
             // Scroll down -> hide
-            setSticky('-30px');
+            setSticky('-40px');
           }
           currPos = window.scrollY;
         };
@@ -25,8 +25,8 @@ const Nav = () => {
         // <nav className={`nav mb-10 bg-[var(--black)] sticky top-[${sticky}] duration-500`}>
 
         <nav 
-            className='nav mb-10 bg-[var(--black)]' 
-            style={{ position: 'sticky', top: sticky, transition: '0.4s' }}
+            className='nav py-2 mb-10 bg-[var(--black)]' 
+            style={{ position: 'sticky', top: sticky, transition: '0.6s' }}
         >
 
             <ul className='flex justify-center gap-[2%]'>
