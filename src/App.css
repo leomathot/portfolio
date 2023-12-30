@@ -169,6 +169,7 @@ form {
     border: none;
   }
   button {
+    margin-top: 30px;
     padding: 4px 15px;
   }
   button:hover {
