@@ -3,11 +3,15 @@ import Box from './Box'
 
 const Projects = () => {
   return (
-    // <section id='projects' className='bg-[#202020] sect'>
+    <div>
+      <div className='w-full h-20 
+        bg-gradient-to-b 
+        from-[var(--black)] from-20% 
+        via-[rgba(0,0,0,0.3)]
+        to-[rgba(0,0,0,0.1)]'>
+      </div>
     <section id='projects' 
-      className='py-10'
-      style={{ background: 
-        'linear-gradient(var(--black), rgba(0,0,0,0.1) 10%' }}
+      className='py-10 bg-[rgba(0,0,0,0.1)]'
     >  
       <div className='max-width'>
         <h2 className='mb-10'>Projects</h2>
@@ -21,6 +25,7 @@ const Projects = () => {
         </div>
       </div>
     </section>
+    </div>
   )
 }
 

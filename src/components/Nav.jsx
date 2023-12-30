@@ -23,7 +23,7 @@ const Nav = () => {
 
     return (
         <nav 
-            className='nav py-2 mb-10 bg-[var(--black)] z-50' 
+            className='nav py-2 bg-[var(--black)] z-50' 
             style={{ position: 'sticky', top: stickyTop, transition: '0.6s' }}
         >
 
