@@ -2,10 +2,10 @@ import React from 'react'
 
 const Box = ({ title, color }) => {
   return (
-    <article className='p-3' style={{background: `var(--proj-bg-${color})`}}>
+    <article className='box p-3' style={{background: `var(--proj-bg-${color})`}}>
         <img src="/src/assets/images/dog-sara-looking.jpg" alt="" 
-            className='h-52 w-64 object-cover ml-auto mr-3'/>
-        <h2>{title}</h2>
+            className='h-72 w-full object-cover'/>
+        <h2 className='my-4 font-[600]'>{title}</h2>
         <p>project description</p>
     </article>
   )

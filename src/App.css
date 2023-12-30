@@ -27,22 +27,22 @@
   --orange-1: #ea4;
 
   --proj-bg-1: linear-gradient(
-    135deg,
-    #407090,
-    var(--black),
-    #605070
+    160deg,
+    #40709080,
+    #50808080,
+    #60507080
   );
   --proj-bg-2: linear-gradient(
-    135deg,
-    #508080,
-    var(--black),
-    #407090
+    160deg,
+    #50808080,
+    #60507080,
+    #40709080
   );
   --proj-bg-3: linear-gradient(
-    135deg,
-    #605070,
-    var(--black),
-    #508080
+    160deg,
+    #60507080,
+    #40709080,
+    #50808080
   );
 
 }
@@ -165,6 +165,25 @@ a {
 ul {
   list-style: none;
   text-align: left;
+}
+
+form {
+  background: var(--proj-bg-3);
+  padding: 20px 12px;
+  fieldset {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  label {
+    display: block;
+  }
+  input[type='text'], input[type='email'], textarea {
+    background: transparent;
+    border: 1px solid var(--gray-2);
+    border-radius: 4px;
+    width: 100%;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
