@@ -2,11 +2,12 @@ import React from 'react'
 
 const Hero = () => {
   return (
-    <section id='about' className='hero min-h-screen md:min-h-[60vh] flex justify-center align-bottom items-center'>
+    <section className='hero min-h-screen md:min-h-[60vh] flex justify-center align-bottom items-center'>
+
       <div className='bg-bottom'></div>
       <div className='bg-move-1'></div>
       <div className='bg-move-2'></div>
-      <div className='bg-top'></div>
+      {/* <div className='bg-top'></div> */}
       <article className='relative md:top-6'>
 
             <h1 className='text-2xl text-cyan-400 ml-[-28px] mb-2.5'>

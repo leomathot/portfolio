@@ -16,8 +16,8 @@
 
   --black: #181818;
   --white: #fafafa;
-  --gray-1: #ddd;
-  --gray-2: #bbb;
+  --gray-1: #c0c0c0;
+  --gray-2: #b0b0b0;
 
   --red-1: #d44;
   --blue-bright: #0df;
@@ -47,16 +47,11 @@
 
 }
 
-.hero {
-  overflow: hidden;
-  position: relative;
-}
-
 .bg-bottom {
   position: absolute;
   top: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   z-index: -3;
   background:
     linear-gradient(
@@ -65,6 +60,34 @@
       #184c58,
       var(--black)
     );
+}
+
+.bg-move-1, .bg-move-2 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 1000%;
+  z-index: -2;
+  opacity: 0.2;
+  background-position: center;
+  animation-name: movement;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes movement {
+  0%   {transform: translateY(0);}
+  100% {transform: translateY(5000px);}
+}
+
+.bg-move-1 {
+  background-image: url('/src/assets/images/code-1.png');
+  animation-duration: 100s;
+}
+
+.bg-move-2 {
+  background-image: url('/src/assets/images/code-2.png');
+  animation-duration: 80s;
 }
 
 .bg-top {
@@ -82,34 +105,6 @@
     );
 }
 
-.bg-move-1, .bg-move-2 {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 500%;
-  z-index: -2;
-  opacity: 0.2;
-  background-position: center;
-  animation-name: movement;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-
-@keyframes movement {
-  0%   {transform: translateY(0);}
-  100% {transform: translateY(500px);}
-}
-
-.bg-move-1 {
-  background-image: url('/src/assets/images/code-1.png');
-  animation-duration: 10s;
-}
-
-.bg-move-2 {
-  background-image: url('/src/assets/images/code-2.png');
-  animation-duration: 8s;
-}
-
 .tran-200ms {
   transition: all 0.5s;
 }
@@ -122,19 +117,10 @@
   color: var(--white);
 }
 
-.sect {
-  padding: 40px 0;
-}
-
 .max-width {
   width: 95%;
   max-width: 900px;
   margin: 0 auto;
-}
-
-.about-desc {
-  text-align: center;
-  color: var(--gray-1);
 }
 
 .about-desc > div:nth-of-type(2) i {
@@ -178,6 +164,7 @@ form {
     background: transparent;
     border: 2px solid var(--black);
     border-radius: 4px;padding: 4px;
+    color: var(--gray-2);
     width: 100%;
   }
   input[type='text']:focus, input[type='email']:focus, textarea:focus {
