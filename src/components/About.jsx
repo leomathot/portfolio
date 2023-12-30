@@ -1,10 +1,46 @@
 import React from 'react'
-import Hero from './Hero'
 
 const About = () => {
   return (
-    <div id='about'  className=''>
-    <Hero/>
+    <section id='about'  className=''>
+
+    {/* bacground */}
+    <div className='w-full h-screen fixed top-0 overflow-hidden -z-30'>
+            <div className='bg-bottom -z-30'></div>
+            <div className='bg-move-1 -z-20'></div>
+            <div className='bg-move-2 -z-20'></div>
+    </div>
+
+    {/* hero */}
+    <div className='hero min-h-screen md:min-h-[60vh] 
+        flex justify-center align-bottom items-center 
+        bg-gradient-to-b from-[transparent] via-[rgba(0,0,0,0.5)] via-70% to-[var(--black)]'
+    >
+      <article className='relative md:top-6'>
+
+            <h1 className='text-2xl text-cyan-400 ml-[-28px] mb-2.5'>
+              <i class='fa-solid fa-chevron-right text-neutral-50 duration-200 text-base mr-2 relative bottom-0.5'/> <span className='duration-200'>Leo</span>nardo Mathot
+            </h1>
+
+            <h2 className='text-neutral-300 mb-4'>Front End Devoloper</h2>
+
+            <div className='text-neutral-300 flex gap-4'>
+              <a href='https://www.linkedin.com/in/leonardo-m-180a90208/' target='_blank'>
+                <i className='fa-brands fa-linkedin hover:text-cyan-400'></i>
+              </a>
+              <a href='https://github.com/leomathot' target='_blank'>
+                <i className='fa-brands fa-github hover:text-cyan-400'></i>
+              </a>
+              <a href='#contact'>
+                <i className='fa-solid fa-envelope hover:text-cyan-400'></i>
+              </a>
+            </div>
+
+        </article>
+    </div>
+    
+    {/* description */}
+    <div className='bg-[var(--black)]'>
     <div className='about-desc max-width md:min-h-[40vh] flex flex-col'>
         <div className='grid md:grid-cols-2 gap-10 max-w-[850px] mx-auto pt-5'>
             <div className='md:text-right'>
@@ -34,6 +70,7 @@ const About = () => {
         </div>
     </div>
     </div>
+    </section>
   )
 }
 

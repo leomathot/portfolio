@@ -4,8 +4,11 @@ import Box from './Box'
 const Projects = () => {
   return (
     // <section id='projects' className='bg-[#202020] sect'>
-    <section id='projects' className='py-10'>
-      
+    <section id='projects' 
+      className='py-10'
+      style={{ background: 
+        'linear-gradient(var(--black), rgba(0,0,0,0.1) 10%' }}
+    >  
       <div className='max-width'>
         <h2 className='mb-10'>Projects</h2>
         <div className='grid grid-cols-2 md:grid-cols-3 gap-4 py-1'>
