@@ -15,8 +15,7 @@ const About = () => {
     <div className='hero min-h-screen md:min-h-[60vh] 
         flex justify-center align-bottom items-center 
         bg-gradient-to-b 
-        from-[rgba(0,0,0,0.1)] 
-        via-[rgba(0,0,0,0.3)] via-70% 
+        from-[rgba(24,24,24,0.1)] 
         to-[var(--black)]'
     >
       <article className='relative md:top-6'>
@@ -54,7 +53,7 @@ const About = () => {
             </div>
         </div>
         
-        <div className='flex justify-center gap-[7vw] flex-wrap my-20 text-cyan-600'>
+        <div className='flex justify-center gap-10 flex-wrap my-20 text-cyan-600'>
 
             <i className="fa-brands fa-html5" title='HTML5'></i>
             <i className="fa-brands fa-css3-alt" title='CSS3'></i>

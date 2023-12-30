@@ -7,11 +7,11 @@ const Projects = () => {
       <div className='w-full h-20 
         bg-gradient-to-b 
         from-[var(--black)] from-20% 
-        via-[rgba(0,0,0,0.3)]
-        to-[rgba(0,0,0,0.1)]'>
+        via-[rgba(24,24,24,0.3)]
+        to-[rgba(24,24,24,0.1)]'>
       </div>
     <section id='projects' 
-      className='py-10 bg-[rgba(0,0,0,0.1)]'
+      className='py-10 bg-[rgba(24,24,24,0.1)]'
     >  
       <div className='max-width'>
         <h2 className='mb-10'>Projects</h2>
