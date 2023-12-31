@@ -17,7 +17,7 @@ const Nav = () => {
           currPos = window.scrollY;
         };
         window.addEventListener('scroll', handleScroll);
-        // Cleanup function to remove the event listener
+        // Cleanup
         return () => window.removeEventListener('scroll', handleScroll);
       }, []);
 

@@ -9,15 +9,16 @@ const Box = ({ title, color }) => {
   let grad = color == 1 ? grad1 : color == 2 ? grad2 : grad3
 
   return (
-    <article className={ `box p-3 ${grad} 
+    <article className={ `box group p-2 sm:p-3 ${grad} 
       hover:from-transparent 
       hover:to-transparent
-      hover:bg-neutral-950/70 
+      hover:bg-neutral-900/70 
+      hover:scale-105
       duration-200` }
     >
         <img src="/src/assets/images/dog-sara-looking.jpg" alt="Project screen shot" 
             className='h-72 w-full object-cover'/>
-        <h3 className='my-4 font-[600]'>{title}</h3>
+        <h3 className='my-4 font-[600] group-hover:text-cyan-500'>{title}</h3>
         <p>project description</p>
     </article>
   )

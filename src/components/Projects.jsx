@@ -9,14 +9,18 @@ const Projects = () => {
         bg-gradient-to-b 
         from-[var(--black)] from-20% 
         via-[rgba(24,24,24,0.3)]
-        to-[rgba(24,24,24,0.1)]'>
+        to-[rgba(24,24,24,0.2)]'>
       </div>
     <section id='projects' 
-      className='py-10 bg-[rgba(24,24,24,0.1)]'
+      className='py-10 bg-[rgba(24,24,24,0.2)]'
     >  
       <div className='max-width'>
         <h2 className='mb-10'>Projects</h2>
-        <div className='grid grid-cols-2 md:grid-cols-3 gap-2 sm:gap-3 md:gap-4 py-1'>
+        <div className='py-1 mx-auto
+          grid  gap-10 w-[80%]
+          sm:grid-cols-2 sm:gap-x-6 sm:w-full
+          md:grid-cols-3'
+        >
           <Box title='Project 01' color='1'/>
           <Box title='Project 02' color='2'/>
           <Box title='Project 03' color='3'/>
