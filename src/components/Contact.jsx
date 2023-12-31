@@ -2,7 +2,7 @@ import React from 'react'
 
 const Contact = () => {
 
-  
+
   return (
     <section id='contact' className='py-10  bg-[rgba(24,24,24,0.1)]'>
       <div className='max-width'>
@@ -10,7 +10,11 @@ const Contact = () => {
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt tempora aperiam, ab quae soluta corrupti placeat perspiciatis, quidem quas quibusdam minus voluptatem neque, doloribus nemo rem molestias quia. Earum, sapiente?</p>
 
         <form action='https://formspree.io/f/mayzbkjj' method='POST'
-          className='max-w-[500px] mx-auto mt-10'
+          className='max-w-[500px] mx-auto mt-10 
+          bg-gradient-to-br
+          from-sky-900/80 
+          via-purple-900/40
+          to-teal-900/80'
         >
 
           <label htmlFor='name'>Name</label>
@@ -26,6 +30,7 @@ const Contact = () => {
             type='submit'>Send</button>
           
         </form>
+
       </div>
     </section>
   )

@@ -2,6 +2,7 @@ import React from 'react'
 import Box from './Box'
 
 const Projects = () => {
+
   return (
     <div>
       <div className='w-full h-20 
