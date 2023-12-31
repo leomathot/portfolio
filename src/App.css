@@ -12,30 +12,34 @@
   --gray-1: #c0c0c0;
   --gray-2: #b0b0b0;
 
-  --red-1: #d44;
-  --blue-bright: #0df;
   --cyan-400: #22d3ee;
+  
+  --red-1: #d44;
   --blue-1: #49d;
   --green-1: #5b5;
   --orange-1: #ea4;
 
+  --glass-blue: rgba(44, 96, 131, 0.7);
+  --glass-green: rgba(43, 99, 99, 0.7);
+  --glass-purple: rgba(81, 56, 106, 0.7);
+
   --proj-bg-1: linear-gradient(
     160deg,
-    #40709080,
-    #50808080,
-    #60507080
+    var(--glass-blue),
+    var(--glass-green),
+    var(--glass-purple)
   );
   --proj-bg-2: linear-gradient(
     160deg,
-    #50808080,
-    #60507080,
-    #40709080
+    var(--glass-green),
+    var(--glass-purple),
+    var(--glass-blue)
   );
   --proj-bg-3: linear-gradient(
     160deg,
-    #60507080,
-    #40709080,
-    #50808080
+    var(--glass-purple),
+    var(--glass-blue),
+    var(--glass-green)
   );
   
   background-color: var(--black);
