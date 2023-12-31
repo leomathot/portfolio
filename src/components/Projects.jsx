@@ -15,7 +15,7 @@ const Projects = () => {
       className='py-10 bg-[rgba(24,24,24,0.2)]'
     >  
       <div className='max-width'>
-        <h2 className='mb-10'>Projects</h2>
+        <h2 className='mb-10 text-lg font-[600]'>Projects</h2>
         <div className='py-1 mx-auto
           grid  gap-10 w-[80%]
           sm:grid-cols-2 sm:gap-x-6 sm:w-full

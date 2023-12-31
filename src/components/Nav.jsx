@@ -23,9 +23,16 @@ const Nav = () => {
 
     return (
         <nav 
-            className='nav py-2 bg-[var(--black)] z-50 sticky duration-500' 
+            className='nav py-2 h-16 z-50 
+            bg-gradient-to-b 
+            from-[var(--black)] from-50% 
+            via-[rgba(24,24,24,0.2)]
+            to-transparent
+            sticky duration-500' 
             style={{ top: stickyTop }} /* doesn't work smoothly as a Tailwind class */
         >
+
+            <div></div>
 
             <ul className='flex justify-center gap-[2%]'>
                 <li className={liSty}>

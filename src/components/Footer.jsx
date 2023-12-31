@@ -2,10 +2,13 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div className='w-full h-40
-        bg-gradient-to-b from-[rgba(24,24,24,0.2)] to-[var(--black)] to-70%'
+    
+    <div className='w-full h-20 
+      bg-gradient-to-b 
+      from-[rgba(24,24,24,0.2)]
+      via-[rgba(24,24,24,0.3)]
+      to-[var(--black)] to-80% '
     >
-
     </div>
   )
 }

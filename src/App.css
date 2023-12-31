@@ -71,31 +71,8 @@
   animation-duration: 8s;
 }
 
-.bg-top {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background: 
-    linear-gradient(
-      #1818180d,
-      #18181833 45%,
-      #181818f0 90%,
-      var(--black) 95%
-    );
-}
-
 .tran-200ms {
   transition: all 0.5s;
-}
-
-.hero:hover h1 i {
-  color: rgb(34 211 238);
-}
-
-.hero:hover span {
-  color: var(--white);
 }
 
 .max-width {
@@ -104,29 +81,9 @@
   margin: 0 auto;
 }
 
-.about-desc > div:nth-of-type(2) i {
-  font-size: 1.5rem;
-}
-
-.about-desc > div:nth-of-type(2) span {
-  font-size: 1.1rem;
-}
-
 a {
   color: inherit;
   text-decoration: none;
-}
-
-.fw400 {
-  font-weight: 400;
-}
-
-.fw600 {
-  font-weight: 600;
-}
-
-.fw700 {
-  font-weight: 700;
 }
 
 ul {
