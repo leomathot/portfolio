@@ -77,6 +77,10 @@ const About = () => {
                     </div>
                 </div>
             </div>
+
+            {/* patch to cover navigation background */}
+            <div className='bg-[var(--black)] w-full h-16 absolute'></div>
+
         </section>
     )
 }
