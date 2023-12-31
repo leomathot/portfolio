@@ -12,7 +12,7 @@ const Contact = () => {
         <form action='https://formspree.io/f/mayzbkjj' method='POST'
           className='max-w-[500px] mx-auto mt-10 
           bg-gradient-to-br
-          from-sky-900/80 
+          from-cyan-900/90 
           via-purple-900/40
           to-teal-900/80'
         >
@@ -26,7 +26,7 @@ const Contact = () => {
           <label htmlFor='message'>Message</label>
           <textarea id='message' name='message' required aria-required='true'/>
 
-          <button className='bg-[var(--black)] hover:bg-teal-950' 
+          <button className='bg-[var(--black)] hover:bg-cyan-900' 
             type='submit'>Send</button>
           
         </form>

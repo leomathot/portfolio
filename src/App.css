@@ -134,11 +134,21 @@ ul {
   text-align: left;
 }
 
+/* project box */
+.box:hover {
+  h3 {
+    color: var(--cyan-400);
+  }
+}
+
+/* contact form */
 form {
   padding: 20px 12px;
   label {
+    font-size: 0.9rem;
     display: block;
     margin-top: 10px;
+    margin-bottom: 5px;
   }
   input[type='text'], input[type='email'], textarea {
     background: transparent;

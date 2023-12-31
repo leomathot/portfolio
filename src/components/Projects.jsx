@@ -16,7 +16,7 @@ const Projects = () => {
     >  
       <div className='max-width'>
         <h2 className='mb-10'>Projects</h2>
-        <div className='grid grid-cols-2 md:grid-cols-3 gap-4 py-1'>
+        <div className='grid grid-cols-2 md:grid-cols-3 gap-2 sm:gap-3 md:gap-4 py-1'>
           <Box title='Project 01' color='1'/>
           <Box title='Project 02' color='2'/>
           <Box title='Project 03' color='3'/>
