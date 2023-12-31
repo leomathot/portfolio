@@ -1,6 +1,8 @@
 import React from 'react'
 
 const Contact = () => {
+
+  
   return (
     <section id='contact' className='py-10  bg-[rgba(24,24,24,0.1)]'>
       <div className='max-width'>
@@ -20,7 +22,8 @@ const Contact = () => {
           <label htmlFor='message'>Message</label>
           <textarea id='message' name='message' required aria-required='true'/>
 
-          <button className='bg-[var(--black)]' type='submit'>Send</button>
+          <button className='bg-[var(--black)] hover:bg-teal-950' 
+            type='submit'>Send</button>
           
         </form>
       </div>

@@ -53,7 +53,7 @@ const About = () => {
             </div>
         </div>
         
-        <div className='flex justify-center gap-10 flex-wrap my-20 text-cyan-600'>
+        <div className='flex justify-center gap-10 flex-wrap my-20 text-teal-700'>
 
             <i className="fa-brands fa-html5" title='HTML5'></i>
             <i className="fa-brands fa-css3-alt" title='CSS3'></i>
