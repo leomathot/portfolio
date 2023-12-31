@@ -2,7 +2,7 @@ import React from 'react'
 
 const About = () => {
     return (
-        <section id='about' className=''>
+        <section id='about' className='relative'>
 
             {/* bacground */}
             <div className='w-full h-screen fixed top-0 overflow-hidden -z-30'>
@@ -79,7 +79,7 @@ const About = () => {
             </div>
 
             {/* patch to cover navigation background */}
-            <div className='bg-[var(--black)] w-full h-16 absolute'></div>
+            <div className='bg-[var(--black)] w-full h-16 absolute bottom-[-64px]'></div>
 
         </section>
     )
