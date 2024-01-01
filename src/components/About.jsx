@@ -5,7 +5,7 @@ const About = () => {
         tran1: 0,
         tran2: 10,
         col1: 10,
-        tran3: 12,
+        tran3: 14,
         tran4: 50
     });
 
@@ -30,7 +30,7 @@ const About = () => {
           transparent ${gradientValues.tran1}px,
           transparent ${gradientValues.tran2}px,
           #000 ${gradientValues.col1}px, 
-          #ffffff00 ${gradientValues.tran3}px, 
+          transparent ${gradientValues.tran3}px, 
           transparent ${gradientValues.tran4}px
           )`
     }
