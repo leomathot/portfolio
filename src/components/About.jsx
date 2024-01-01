@@ -5,12 +5,21 @@ const About = () => {
         tran1: 0,
         tran2: 10,
         col1: 10,
-        tran3: 14,
+        tran3: 13,
         tran4: 50
     });
 
     useEffect(() => {
         const intervalId = setInterval(() => {
+            if (gradientValues.tran1 >= 50) {
+                setGradientValues({
+                    tran1: 0,
+                    tran2: 10,
+                    col1: 10,
+                    tran3: 13,
+                    tran4: 50
+                })
+            } else {
             setGradientValues({
                 ...gradientValues,
                 tran1: gradientValues.tran1 + 0.2,
@@ -18,18 +27,17 @@ const About = () => {
                 col1: gradientValues.col1 + 0.2,
                 tran3: gradientValues.tran3 + 0.2,
                 tran4: gradientValues.tran4 + 0.2,
-            });
-        }, 10);
-        console.log(gradientValues.tran1)
+            })}
+        }, 10)
         return () => clearInterval(intervalId)
-    }, [gradientValues]);
+    }, [gradientValues])
 
     function getGradientString(gradientValues) {
         return `repeating-radial-gradient( 
           circle at 50% , 
           transparent ${gradientValues.tran1}px,
           transparent ${gradientValues.tran2}px,
-          #000 ${gradientValues.col1}px, 
+          #012 ${gradientValues.col1}px, 
           transparent ${gradientValues.tran3}px, 
           transparent ${gradientValues.tran4}px
           )`
@@ -40,10 +48,10 @@ const About = () => {
 
             {/* bacground */}
             <div className='w-full h-screen fixed top-0 overflow-hidden -z-30'>
-                <div className='bg-bottom -z-30'></div>
+                <div className='bg-bottom -z-30'></div> {/* uses css */}
                 <div className='grad-cont -z-20' 
                     style={{ backgroundImage: getGradientString(gradientValues) }}>
-                </div>
+                </div> {/* uses css */}
             </div>
 
             {/* hero */}
