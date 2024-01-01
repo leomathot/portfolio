@@ -56,15 +56,15 @@ const About = () => {
 
             {/* hero */}
             <div className='hero group min-h-screen md:min-h-[60vh] 
-        flex justify-center align-bottom items-center 
-        bg-gradient-to-b 
-        from-[rgba(24,24,24,0.1)] 
-        to-[var(--black)]'
+                flex justify-center align-bottom items-center 
+                bg-gradient-to-b 
+                from-[rgba(24,24,24,0.1)] 
+                to-[var(--black)]'
             >
                 <article className='relative md:top-6'>
 
                     <h1 className='text-2xl text-cyan-400 ml-[-28px] mb-2.5'>
-                        <i class='fa-solid fa-chevron-right 
+                        <i className='fa-solid fa-chevron-right 
                     text-neutral-50 
                     group-hover:text-cyan-400 duration-200
                     text-base mr-4 relative bottom-0.5'
