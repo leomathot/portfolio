@@ -44,31 +44,16 @@
     );
 }
 
-.bg-move-1, .bg-move-2 {
+.grad-cont {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 600%;
+  height: 210%;
   opacity: 0.2;
   background-position: center;
   animation-name: movement;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-}
-
-@keyframes movement {
-  0%   {transform: translateY(0);}
-  100% {transform: translateY(500px);}
-}
-
-.bg-move-1 {
-  background-image: url('/src/assets/images/code-1.png');
-  animation-duration: 10s;
-}
-
-.bg-move-2 {
-  background-image: url('/src/assets/images/code-2.png');
-  animation-duration: 8s;
 }
 
 .tran-200ms {

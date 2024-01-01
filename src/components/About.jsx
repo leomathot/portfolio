@@ -1,14 +1,49 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 const About = () => {
+    const [gradientValues, setGradientValues] = useState({
+        tran1: 0,
+        tran2: 10,
+        col1: 10,
+        tran3: 12,
+        tran4: 50
+    });
+
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            setGradientValues({
+                ...gradientValues,
+                tran1: gradientValues.tran1 + 0.2,
+                tran2: gradientValues.tran2 + 0.2,
+                col1: gradientValues.col1 + 0.2,
+                tran3: gradientValues.tran3 + 0.2,
+                tran4: gradientValues.tran4 + 0.2,
+            });
+        }, 10);
+        console.log(gradientValues.tran1)
+        return () => clearInterval(intervalId)
+    }, [gradientValues]);
+
+    function getGradientString(gradientValues) {
+        return `repeating-radial-gradient( 
+          circle at 50% , 
+          transparent ${gradientValues.tran1}px,
+          transparent ${gradientValues.tran2}px,
+          #000 ${gradientValues.col1}px, 
+          #ffffff00 ${gradientValues.tran3}px, 
+          transparent ${gradientValues.tran4}px
+          )`
+    }
+
     return (
         <section id='about' className='relative'>
 
             {/* bacground */}
             <div className='w-full h-screen fixed top-0 overflow-hidden -z-30'>
                 <div className='bg-bottom -z-30'></div>
-                <div className='bg-move-1 -z-20'></div>
-                <div className='bg-move-2 -z-20'></div>
+                <div className='grad-cont -z-20' 
+                    style={{ backgroundImage: getGradientString(gradientValues) }}>
+                </div>
             </div>
 
             {/* hero */}
