@@ -4,7 +4,7 @@ const Contact = () => {
 
 
   return (
-    <section id='contact' className='py-10  bg-[rgba(24,24,24,0.2)]'>
+    <section id='contact' className='py-10  bg-[rgba(24,26,30,0.2)]'>
       <div className='max-width'>
         <h2 className='mb-10 text-lg font-[600]'>Contact</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt tempora aperiam, ab quae soluta corrupti placeat perspiciatis, quidem quas quibusdam minus voluptatem neque, doloribus nemo rem molestias quia. Earum, sapiente?</p>

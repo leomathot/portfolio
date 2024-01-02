@@ -22,13 +22,13 @@ const About = () => {
             } else {
             setGradientValues({
                 ...gradientValues,
-                tran1: gradientValues.tran1 + 0.2,
-                tran2: gradientValues.tran2 + 0.2,
-                col1: gradientValues.col1 + 0.2,
-                tran3: gradientValues.tran3 + 0.2,
-                tran4: gradientValues.tran4 + 0.2,
+                tran1: gradientValues.tran1 + 0.5,
+                tran2: gradientValues.tran2 + 0.5,
+                col1: gradientValues.col1 + 0.5,
+                tran3: gradientValues.tran3 + 0.5,
+                tran4: gradientValues.tran4 + 0.5,
             })}
-        }, 10)
+        }, 25)
         return () => clearInterval(intervalId)
     }, [gradientValues])
 
@@ -50,7 +50,7 @@ const About = () => {
             <div className='w-full h-screen fixed top-0 overflow-hidden -z-30'>
                 <div className='bg-bottom -z-30'></div> {/* uses css */}
                 <div className='grad-cont -z-20' 
-                    style={{ backgroundImage: getGradientString(gradientValues) }}>
+                    style={{ background: getGradientString(gradientValues) }}>
                 </div> {/* uses css */}
             </div>
 
@@ -58,7 +58,7 @@ const About = () => {
             <div className='hero group min-h-screen md:min-h-[60vh] 
                 flex justify-center align-bottom items-center 
                 bg-gradient-to-b 
-                from-[rgba(24,24,24,0.1)] 
+                from-[rgba(24,26,30,0.1)] 
                 to-[var(--black)]'
             >
                 <article className='relative md:top-6'>

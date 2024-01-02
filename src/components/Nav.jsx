@@ -26,7 +26,7 @@ const Nav = () => {
         <nav className='nav py-2 h-16 z-50 
             bg-gradient-to-b 
             from-[var(--black)] from-50% 
-            via-[rgba(24,24,24,0.2)]
+            via-[rgba(24,26,30,0.2)]
             to-transparent
             sticky duration-500' 
             style={{ top: stickyTop }} /* doesn't work smoothly as a Tailwind class */
