@@ -74,7 +74,7 @@ const About = () => {
                         <span className='group-hover:text-[var(--white)] duration-200'>Leo</span>nardo Mathot
                     </h1>
 
-                    <h2 className='text-neutral-300 mb-4'>Front End Devoloper</h2>
+                    <h2 className='text-neutral-300 mb-4'>Front End Developer</h2>
 
                     <div className='text-neutral-300 flex gap-4'>
                         <a href='https://www.linkedin.com/in/leonardo-m-180a90208/' target='_blank'>
