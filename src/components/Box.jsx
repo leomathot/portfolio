@@ -16,7 +16,7 @@ const Box = ({ title, color }) => {
       hover:scale-105
       duration-200` }
     >
-        <img src="/src/assets/images/dog-sara-looking.jpg" alt="Project screen shot" 
+        <img src="./src/assets/images/dog-sara-looking.jpg" alt="Project screen shot" 
             className='h-72 w-full object-cover'/>
         <h3 className='my-4 font-[600] group-hover:text-cyan-500'>{title}</h3>
         <p>project description</p>
