@@ -12,7 +12,7 @@ const Box = ({ title, color }) => {
     <article className={ `box group p-2 sm:p-3 ${grad} 
       hover:from-transparent 
       hover:to-transparent
-      hover:bg-neutral-900/70 
+      hover:bg-[rgba(24,26,30,0.9)] 
       hover:scale-105
       duration-200` }
     >

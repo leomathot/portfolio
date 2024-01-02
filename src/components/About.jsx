@@ -10,7 +10,9 @@ const About = () => {
     });
 
     useEffect(() => {
-        const intervalId = setInterval(() => {
+        let animationFrameId;
+
+        const interval = setInterval(() => {
             if (gradientValues.tran1 >= 50) {
                 setGradientValues({
                     tran1: 0,
@@ -22,19 +24,19 @@ const About = () => {
             } else {
             setGradientValues({
                 ...gradientValues,
-                tran1: gradientValues.tran1 + 0.5,
-                tran2: gradientValues.tran2 + 0.5,
-                col1: gradientValues.col1 + 0.5,
-                tran3: gradientValues.tran3 + 0.5,
-                tran4: gradientValues.tran4 + 0.5,
+                tran1: gradientValues.tran1 + 0.25,
+                tran2: gradientValues.tran2 + 0.25,
+                col1: gradientValues.col1 + 0.25,
+                tran3: gradientValues.tran3 + 0.25,
+                tran4: gradientValues.tran4 + 0.25,
             })}
-        }, 25)
-        return () => clearInterval(intervalId)
+        }, 10)
+        return () => clearInterval(interval)
     }, [gradientValues])
 
     function getGradientString(gradientValues) {
         return `repeating-radial-gradient( 
-          circle at 50% , 
+          circle at 0 100%, 
           transparent ${gradientValues.tran1}px,
           transparent ${gradientValues.tran2}px,
           #012 ${gradientValues.col1}px, 

@@ -5,10 +5,9 @@ const Projects = () => {
 
   return (
     <div>
-      <div className='w-full h-10 
+      <div className='w-full h-8 
         bg-gradient-to-b 
         from-[var(--black)] 
-        via-[rgba(24,26,30,0.3)]
         to-[rgba(24,26,30,0.2)]'>
       </div>
       <section id='projects'
