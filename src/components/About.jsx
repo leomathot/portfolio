@@ -77,14 +77,17 @@ const About = () => {
                     <h2 className='text-neutral-300 mb-4'>Front End Developer</h2>
 
                     <div className='text-neutral-300 flex gap-4'>
-                        <a href='https://www.linkedin.com/in/leonardo-m-180a90208/' target='_blank'>
-                            <i className='fa-brands fa-linkedin hover:text-cyan-400'></i>
+                        <a className='hover:text-cyan-400' href='https://www.linkedin.com/in/leonardo-m-180a90208/' target='_blank'>
+                            <i className='fa-brands fa-linkedin'></i>
+                            <span className='text-xs ml-1'>LinkedIn</span>
                         </a>
-                        <a href='https://github.com/leomathot' target='_blank'>
-                            <i className='fa-brands fa-github hover:text-cyan-400'></i>
+                        <a className='hover:text-cyan-400' href='https://github.com/leomathot' target='_blank'>
+                            <i className='fa-brands fa-github'></i>
+                            <span className='text-xs ml-1'>GitHub</span>
                         </a>
-                        <a href='#contact'>
-                            <i className='fa-solid fa-envelope hover:text-cyan-400'></i>
+                        <a className='hover:text-cyan-400' href='#contact'>
+                            <i className='fa-solid fa-envelope'></i>
+                            <span className='text-xs ml-1'>Contact</span>
                         </a>
                     </div>
 
