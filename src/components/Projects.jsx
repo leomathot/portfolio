@@ -5,11 +5,13 @@ const Projects = () => {
 
   return (
     <div>
+
       <div className='w-full h-16 
         bg-gradient-to-b 
         from-zinc-900 
         to-zinc-900/20 to-50%'>
       </div>
+
       <section id='projects'
         className='py-10 bg-zinc-900/20'
       >
