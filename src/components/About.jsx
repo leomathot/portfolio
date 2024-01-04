@@ -10,7 +10,6 @@ const About = () => {
     });
 
     useEffect(() => {
-        let animationFrameId;
 
         const interval = setInterval(() => {
             if (gradientValues.tran1 >= 50) {
@@ -39,7 +38,7 @@ const About = () => {
           circle at 0 100%, 
           transparent ${gradientValues.tran1}px,
           transparent ${gradientValues.tran2}px,
-          #012 ${gradientValues.col1}px, 
+          #022 ${gradientValues.col1}px, 
           transparent ${gradientValues.tran3}px, 
           transparent ${gradientValues.tran4}px
           )`
@@ -57,37 +56,49 @@ const About = () => {
             </div>
 
             {/* hero */}
-            <div className='hero group min-h-screen md:min-h-[60vh] 
+            <div className='group/hero min-h-screen md:min-h-[60vh] 
                 flex justify-center align-bottom items-center 
                 bg-gradient-to-b 
-                from-[rgba(24,26,30,0.1)] 
-                to-[var(--black)]'
+                from-zinc-900/10 
+                via-zinc-900/80 via-90%
+                to-zinc-900'
             >
                 <article className='relative md:top-6'>
 
                     <h1 className='text-2xl text-cyan-400 ml-[-28px] mb-2.5'>
                         <i className='fa-solid fa-chevron-right 
-                    text-neutral-50 
-                    group-hover:text-cyan-400 duration-200
-                    text-base mr-4 relative bottom-0.5'
+                        text-base text-zinc-50 mr-4 relative bottom-0.5 
+                        group-hover/hero:text-cyan-400 duration-200'
                         />
-                        <span className='group-hover:text-[var(--white)] duration-200'>Leo</span>nardo Mathot
+                        <span className='group-hover/hero:text-zinc-50 duration-200'
+                        >Leo</span>nardo Mathot
                     </h1>
 
-                    <h2 className='text-neutral-300 mb-4'>Front End Developer</h2>
+                    <h2 className='text-zinc-300 mb-4'>Front End Developer</h2>
 
-                    <div className='text-neutral-300 flex gap-4'>
-                        <a className='hover:text-cyan-400' href='https://www.linkedin.com/in/leonardo-m-180a90208/' target='_blank'>
+                    {/* links */}
+                    <div className='text-zinc-300 flex gap-4 items-center'>
+                        <a className='hover:text-cyan-400 group/link' 
+                            href='https://www.linkedin.com/in/leonardo-m-180a90208/' target='_blank'>
                             <i className='fa-brands fa-linkedin'></i>
-                            <span className='text-xs ml-1'>LinkedIn</span>
+                            <span className='text-xs ml-1 
+                            text-transparent group-hover/link:text-cyan-400 
+                            inline-block h-full relative top-[2px] overflow-hidden duration-500 max-w-0 group-hover/link:max-w-20'>LinkedIn</span>
                         </a>
-                        <a className='hover:text-cyan-400' href='https://github.com/leomathot' target='_blank'>
+                        <a className='hover:text-cyan-400 group/link' 
+                            href='https://github.com/leomathot' target='_blank'>
                             <i className='fa-brands fa-github'></i>
-                            <span className='text-xs ml-1'>GitHub</span>
+                            <span className='text-xs ml-1 
+                            text-transparent group-hover/link:text-cyan-400 
+                            inline-block h-full relative top-[2px] overflow-hidden duration-500 max-w-0 group-hover/link:max-w-20'
+                            >GitHub</span>
                         </a>
-                        <a className='hover:text-cyan-400' href='#contact'>
+                        <a className='hover:text-cyan-400 group/link' 
+                            href='#contact'>
                             <i className='fa-solid fa-envelope'></i>
-                            <span className='text-xs ml-1'>Contact</span>
+                            <span className='text-xs ml-1 
+                            text-transparent group-hover/link:text-cyan-400 
+                            inline-block h-full relative top-[2px] overflow-hidden duration-500 max-w-0 group-hover/link:max-w-20'>Contact</span>
                         </a>
                     </div>
 
@@ -95,7 +106,7 @@ const About = () => {
             </div>
 
             {/* description */}
-            <div className='bg-[var(--black)]'>
+            <div className='bg-zinc-900 text-zinc-200'>
                 <div className='about-desc max-width md:min-h-[40vh] flex flex-col'>
                     <div className='grid md:grid-cols-2 gap-10 max-w-[850px] mx-auto pt-5'>
                         <div className='md:text-right'>
@@ -106,7 +117,7 @@ const About = () => {
                         </div>
                     </div>
 
-                    {/* logos */}
+                    {/* technology logos */}
                     <div className='flex justify-center items-center gap-8 flex-wrap my-20 px-4 text-cyan-400/60'>
 
                         <i className='fa-brands fa-html5 text-2xl' title='HTML5'></i>
@@ -130,7 +141,7 @@ const About = () => {
             </div>
 
             {/* patch to cover navigation background */}
-            <div className='bg-[var(--black)] w-full h-16 absolute bottom-[-64px]'></div>
+            <div className='bg-zinc-900 w-full h-16 absolute bottom-[-64px]'></div>
 
         </section>
     )
