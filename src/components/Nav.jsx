@@ -11,7 +11,7 @@ const Nav = () => {
             setStickyTop('-2px')
           } else {
             // Scroll down -> hide
-            setStickyTop('-40px')
+            setStickyTop('-48px')
           }
           currPos = window.scrollY;
         };
@@ -21,11 +21,10 @@ const Nav = () => {
       }, []);
 
     return (
-        <nav className='nav py-2 h-16 z-50 
+        <nav className='nav py-2 h-12 z-50 
             bg-gradient-to-b 
-            from-zinc-900 from-50% 
-            via-zinc-900/20
-            to-transparent
+            from-zinc-900 from-80%
+            to-zinc-900/20
             sticky duration-500' 
             style={{ top: stickyTop }} /* doesn't work smoothly as a Tailwind class */
         >

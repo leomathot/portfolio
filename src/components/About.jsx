@@ -47,7 +47,7 @@ const About = () => {
     return (
         <section id='about' className='relative'>
 
-            {/* bacground */}
+            {/* page bacground */}
             <div className='w-full h-screen fixed top-0 overflow-hidden -z-30'>
                 <div className='bg-bottom -z-30'></div> {/* uses css */}
                 <div className='grad-cont -z-20' 
@@ -59,9 +59,8 @@ const About = () => {
             <div className='group/hero min-h-screen md:min-h-[60vh] 
                 flex justify-center align-bottom items-center 
                 bg-gradient-to-b 
-                from-zinc-900/10 
-                via-zinc-900/80 via-90%
-                to-zinc-900'
+                from-transparent 
+                to-zinc-900/50'
             >
                 <article className='relative md:top-6'>
 
@@ -106,7 +105,10 @@ const About = () => {
             </div>
 
             {/* description */}
-            <div className='bg-zinc-900 text-zinc-200'>
+            <div className='bg-gradient-to-b
+            from-zinc-900/50 from-20%
+            to-zinc-900 
+            text-zinc-200'>
                 <div className='about-desc max-width md:min-h-[40vh] flex flex-col'>
                     <div className='grid md:grid-cols-2 gap-10 max-w-[850px] mx-auto pt-5'>
                         <div className='md:text-right'>
@@ -141,7 +143,7 @@ const About = () => {
             </div>
 
             {/* patch to cover navigation background */}
-            <div className='bg-zinc-900 w-full h-16 absolute bottom-[-64px]'></div>
+            {/* <div className='bg-zinc-900 w-full h-16 absolute bottom-[-64px]'></div> */}
 
         </section>
     )
