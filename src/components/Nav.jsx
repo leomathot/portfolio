@@ -9,7 +9,7 @@ const Nav = () => {
         const handleScroll = () => {
             if (window.scrollY < currPos) {
                 // Scroll up -> show
-                setStickyTop('-2px')
+                setStickyTop('-1px')
             } else {
                 // Scroll down -> hide
                 setStickyTop('-48px')
