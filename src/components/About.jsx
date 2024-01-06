@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { useReducedMotion } from '../hooks/useReducedMotion'
 
 const About = () => {
     const [gradientValues, setGradientValues] = useState({
@@ -8,30 +9,35 @@ const About = () => {
         tran3: 13,
         tran4: 50
     });
+    let isReducedMotion = useReducedMotion()
+    console.log(isReducedMotion)
 
     useEffect(() => {
 
-        const interval = setInterval(() => {
-            if (gradientValues.tran1 >= 50) {
-                setGradientValues({
-                    tran1: 0,
-                    tran2: 10,
-                    col1: 10,
-                    tran3: 13,
-                    tran4: 50
-                })
-            } else {
-            setGradientValues({
-                ...gradientValues,
-                tran1: gradientValues.tran1 + 0.25,
-                tran2: gradientValues.tran2 + 0.25,
-                col1: gradientValues.col1 + 0.25,
-                tran3: gradientValues.tran3 + 0.25,
-                tran4: gradientValues.tran4 + 0.25,
-            })}
-        }, 10)
-        return () => clearInterval(interval)
-    }, [gradientValues])
+        if (!isReducedMotion) {
+            const interval = setInterval(() => {
+                if (gradientValues.tran1 >= 50) {
+                    setGradientValues({
+                        tran1: 0,
+                        tran2: 10,
+                        col1: 10,
+                        tran3: 13,
+                        tran4: 50
+                    })
+                } else {
+                    setGradientValues({
+                        ...gradientValues,
+                        tran1: gradientValues.tran1 + 0.25,
+                        tran2: gradientValues.tran2 + 0.25,
+                        col1: gradientValues.col1 + 0.25,
+                        tran3: gradientValues.tran3 + 0.25,
+                        tran4: gradientValues.tran4 + 0.25,
+                    })
+                }
+            }, 10)
+            return () => clearInterval(interval)
+        }
+    }, [gradientValues, isReducedMotion])
 
     function getGradientString(gradientValues) {
         return `repeating-radial-gradient( 
@@ -50,7 +56,7 @@ const About = () => {
             {/* page bacground */}
             <div className='w-full h-screen fixed top-0 overflow-hidden -z-30'>
                 <div className='bg-bottom -z-30'></div> {/* uses css */}
-                <div className='grad-cont -z-20' 
+                <div className='grad-cont -z-20'
                     style={{ background: getGradientString(gradientValues) }}>
                 </div> {/* uses css */}
             </div>
@@ -77,14 +83,14 @@ const About = () => {
 
                     {/* links */}
                     <div className='text-zinc-300 flex gap-4 items-center'>
-                        <a className='hover:text-cyan-400 group/link' 
+                        <a className='hover:text-cyan-400 group/link'
                             href='https://www.linkedin.com/in/leonardo-m-180a90208/' target='_blank'>
                             <i className='fa-brands fa-linkedin'></i>
                             <span className='text-xs ml-1 
                             text-transparent group-hover/link:text-cyan-400 
                             inline-block h-full relative top-[2px] overflow-hidden duration-500 max-w-0 group-hover/link:max-w-20'>LinkedIn</span>
                         </a>
-                        <a className='hover:text-cyan-400 group/link' 
+                        <a className='hover:text-cyan-400 group/link'
                             href='https://github.com/leomathot' target='_blank'>
                             <i className='fa-brands fa-github'></i>
                             <span className='text-xs ml-1 
@@ -92,7 +98,7 @@ const About = () => {
                             inline-block h-full relative top-[2px] overflow-hidden duration-500 max-w-0 group-hover/link:max-w-20'
                             >GitHub</span>
                         </a>
-                        <a className='hover:text-cyan-400 group/link' 
+                        <a className='hover:text-cyan-400 group/link'
                             href='#contact'>
                             <i className='fa-solid fa-envelope'></i>
                             <span className='text-xs ml-1 
@@ -141,9 +147,6 @@ const About = () => {
                     </div>
                 </div>
             </div>
-
-            {/* patch to cover navigation background */}
-            {/* <div className='bg-zinc-900 w-full h-16 absolute bottom-[-64px]'></div> */}
 
         </section>
     )
