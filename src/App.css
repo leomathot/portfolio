@@ -31,10 +31,16 @@
   background:
     linear-gradient(
       90deg,
-      var(--zinc-900) 1%,
-      var(--bluish-green) 45%,
-      var(--bluish-green) 55%,
-      var(--zinc-900) 99%
+      rgba(24,24,27,0.8),
+      rgba(24,24,27,0.3),
+      transparent 30%,
+      transparent 70%,
+      rgba(24,24,27,0.3),
+      rgba(24,24,27,0.8)
+    ),
+    linear-gradient(
+      var(--bluish-green),
+      var(--bluish-green)
     );
 }
 

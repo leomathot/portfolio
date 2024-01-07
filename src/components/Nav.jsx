@@ -2,7 +2,10 @@ import React, { useState, useEffect } from 'react'
 
 const Nav = () => {
     const [stickyTop, setStickyTop] = useState('-2px')
-    const [relativeTop, setRelativeTop] = useState(0)
+    const [navUpperValues, setNavUpperValue] = useState({
+        listRelTop: 0, 
+        navBg: 'zinc-900/50'
+    })
     let currPos = window.scrollY;
 
     useEffect(() => {
@@ -27,9 +30,19 @@ const Nav = () => {
           const navBarTop = navBar.getBoundingClientRect().top
       
           if (navBarTop <= 30) {
-            setRelativeTop(0)
+            setNavUpperValue({
+                ...navUpperValues,
+                listRelTop: 0, 
+                navBg: navBarTop <= 5 ? 
+                    'rgba(24,24,27,0.98)' : 
+                    'rgba(24,24,27,0.5)'
+            })
           } else {
-            setRelativeTop(-20)
+            setNavUpperValue({
+                ...navUpperValues,
+                listRelTop: -20, 
+                navBg: 'rgba(24,24,27,0.5)'
+            })
           }
         }
         window.addEventListener('scroll', handleScroll)
@@ -37,15 +50,14 @@ const Nav = () => {
       }, [])
 
     return (
-        <nav id='nav' className='nav py-2 h-12 z-50 
-            bg-gradient-to-b 
-            from-zinc-900 from-80%
-            to-zinc-900/20
-            sticky duration-500'
-            style={{ top: stickyTop }} /* doesn't work smoothly as a Tailwind class */
+        <nav id='nav' className='nav py-2 h-12 z-50 sticky duration-500'
+            style={{ 
+                top: stickyTop, 
+                background: navUpperValues.navBg
+            }} /* doesn't work smoothly as a Tailwind class */
         >
             <ul className='flex justify-center gap-[2%] relative duration-500'
-                style={{ top: relativeTop }}
+                style={{ top: navUpperValues.listRelTop }}
             >
                 <li className='text-zinc-400 hover:text-zinc-50'>
                     <a className='p-2' href="#about">About</a>

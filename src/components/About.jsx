@@ -111,9 +111,7 @@ const About = () => {
             </div>
 
             {/* description */}
-            <div className='bg-gradient-to-b
-            from-zinc-900/50 from-20%
-            to-zinc-900 
+            <div className='bg-zinc-900/50 
             text-zinc-200'>
                 <div className='about-desc max-width md:min-h-[40vh] flex flex-col'>
                     <div className='grid md:grid-cols-2 gap-10 max-w-[850px] mx-auto pt-5'>
