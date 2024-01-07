@@ -112,7 +112,7 @@ const About = () => {
 
             {/* description */}
             <div className='bg-zinc-900/50 
-            text-zinc-200'>
+            text-zinc-300'>
                 <div className='about-desc max-width md:min-h-[40vh] flex flex-col'>
                     <div className='grid md:grid-cols-2 gap-10 max-w-[850px] mx-auto pt-5'>
                         <div className='md:text-right'>

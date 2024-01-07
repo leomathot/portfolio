@@ -61,13 +61,13 @@ const Nav = () => {
             <ul className='flex justify-center gap-[2%] relative duration-500'
                 style={{ top: navUpperValues.listRelTop }}
             >
-                <li className='text-zinc-400 hover:text-zinc-50'>
+                <li className='text-zinc-300/90 hover:text-zinc-50'>
                     <a className='p-2' href="#about">About</a>
                 </li>
-                <li className='text-zinc-400 hover:text-zinc-50'>
+                <li className='text-zinc-300/90 hover:text-zinc-50'>
                     <a className='p-2' href="#projects">Projects</a>
                 </li>
-                <li className='text-zinc-400 hover:text-zinc-50'>
+                <li className='text-zinc-300/90 hover:text-zinc-50'>
                     <a className='p-2' href="#contact">Contact</a>
                 </li>
             </ul>
