@@ -31,12 +31,14 @@
   background:
     linear-gradient(
       90deg,
-      rgba(24,24,27,0.8),
+      rgba(24,24,27,0.7),
       rgba(24,24,27,0.3),
-      transparent 30%,
-      transparent 70%,
+      rgba(24,24,27,0.1),
+      rgba(24,24,27,0.05),
+      rgba(24,24,27,0.05),
+      rgba(24,24,27,0.1),
       rgba(24,24,27,0.3),
-      rgba(24,24,27,0.8)
+      rgba(24,24,27,0.7)
     ),
     linear-gradient(
       var(--bluish-green),
