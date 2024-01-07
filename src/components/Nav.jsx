@@ -25,6 +25,9 @@ const Nav = () => {
     }, [])
 
     useEffect(() => {
+        const zinc900a50 = 'rgb(24,24,27,0.5)'
+        const zinc900a98 = 'rgb(24,24,27,0.98)'
+
         const handleScroll = () => {
           const navBar = document.querySelector('#nav')
           const navBarTop = navBar.getBoundingClientRect().top
@@ -33,15 +36,13 @@ const Nav = () => {
             setNavUpperValue({
                 ...navUpperValues,
                 listRelTop: 0, 
-                navBg: navBarTop <= 5 ? 
-                    'rgba(24,24,27,0.98)' : 
-                    'rgba(24,24,27,0.5)'
+                navBg: navBarTop <= 5 ? zinc900a98 : zinc900a50
             })
           } else {
             setNavUpperValue({
                 ...navUpperValues,
                 listRelTop: -20, 
-                navBg: 'rgba(24,24,27,0.5)'
+                navBg: zinc900a50
             })
           }
         }
@@ -50,7 +51,8 @@ const Nav = () => {
       }, [])
 
     return (
-        <nav id='nav' className='nav py-2 h-12 z-50 sticky duration-500'
+        <nav id='nav' 
+            className='nav py-2 h-12 z-50 sticky duration-500'
             style={{ 
                 top: stickyTop, 
                 background: navUpperValues.navBg

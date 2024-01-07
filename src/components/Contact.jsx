@@ -6,16 +6,18 @@ const Contact = () => {
   return (
     <section id='contact' className='py-10 bg-zinc-900/20'>
       <div className='max-width'>
-        <h2 className='mb-10 text-lg font-[600]'>Contact</h2>
+        <h2 className='mb-10 text-lg font-[600] text-cyan-400'>Contact</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt tempora aperiam, ab quae soluta corrupti placeat perspiciatis, quidem quas quibusdam minus voluptatem neque, doloribus nemo rem molestias quia. Earum, sapiente?</p>
 
         {/* contact form */}
         <form action='https://formspree.io/f/mayzbkjj' method='POST'
-          className='w-[95%] max-w-[500px] mx-auto mt-10 
-          bg-gradient-to-br
-          from-cyan-900/90 
-          via-purple-900/40
-          to-teal-900/80'
+          className='
+            w-[95%] max-w-[500px] mx-auto mt-10 
+            shadow-md shadow-zinc-900/50
+            bg-gradient-to-br
+            from-cyan-900/90 
+            via-purple-900/40
+            to-teal-900/80'
         >
 
           <label htmlFor='name'>Name</label>

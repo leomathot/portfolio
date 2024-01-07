@@ -65,7 +65,7 @@ const About = () => {
             <div className='group/hero min-h-screen md:min-h-[60vh] 
                 flex justify-center align-bottom items-center 
                 bg-gradient-to-b 
-                from-transparent 
+                from-transparent
                 to-zinc-900/50'
             >
                 <article className='relative md:top-6'>
@@ -124,7 +124,7 @@ const About = () => {
                     </div>
 
                     {/* technology logos */}
-                    <div className='flex justify-center items-center gap-8 flex-wrap my-20 px-4 text-cyan-400/60'>
+                    <div className='flex justify-center items-center gap-8 flex-wrap my-20 px-4 text-cyan-400/70'>
 
                         <i className='fa-brands fa-html5 text-2xl' title='HTML5'></i>
                         <i className='fa-brands fa-css3-alt text-2xl' title='CSS3'></i>
