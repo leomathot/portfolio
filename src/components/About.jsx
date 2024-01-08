@@ -10,7 +10,6 @@ const About = () => {
         tran4: 50
     });
     let isReducedMotion = useReducedMotion()
-    console.log(isReducedMotion)
 
     useEffect(() => {
 

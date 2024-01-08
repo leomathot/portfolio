@@ -70,6 +70,127 @@ ul {
   text-align: left;
 }
 
+/* tic-tac-toe */
+#tic-tac-toe button {
+  padding: 5px 10px;
+  background: transparent;
+  border: 2px solid #f0f0f0;
+  color: #f0f0f0;
+  border-radius: 5px;
+  transition: 0.3s;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#tic-tac-toe button:hover {
+  background: #f0f0f0;
+  color: #303030;
+}
+
+#tic-tac-toe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #151515;
+}
+
+#tic-tac-toe .board {
+  position: relative;
+  padding: 5px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: fit-content;
+  margin: auto;
+  text-align: center;
+}
+
+#tic-tac-toe .board .board-squares {
+  width: 100%;
+  background-color: #252525;
+  padding: 8px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+#tic-tac-toe .square {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #505050;
+  border-radius: 5px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  font-size: 48px;
+}
+
+#tic-tac-toe .square:hover {
+  border: 2px solid #f0f0f0;
+}
+
+#tic-tac-toe .turn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: auto;
+  width: fit-content;
+  position: relative;
+  border-radius: 10px;
+}
+
+#tic-tac-toe .turn .square {
+  width: 50px;
+  height: 50px;
+  background-color: #252525;
+  pointer-events: none;
+  border-color: transparent;
+  font-size: 30px;
+}
+
+#tic-tac-toe .turn .is-selected {
+  color: #fff;
+  background: #405080;
+}
+
+#tic-tac-toe .winner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+}
+
+#tic-tac-toe .winner .square {
+  width: 60px;
+  height: 60px;
+  pointer-events: none;
+  border-color: transparent;
+}
+
+#tic-tac-toe .winner .text {
+  background: #405090;
+  border: 2px solid #f0f0f0;
+  border-radius: 10px;
+  height: 80%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+}
+
 /* contact form */
 form {
   padding: 20px 12px;
