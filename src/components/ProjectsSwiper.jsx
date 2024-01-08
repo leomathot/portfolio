@@ -9,13 +9,19 @@ import 'swiper/css/pagination'
 const ProjectsSwiper = () => {
 
     const swiperSlideContClass = `
-        w-[90%] max-w-[500px] mx-auto h-[80vh]
-        p-5 border-b-[40px] border-transparent`
+        bg-gradient-to-br
+        from-cyan-800
+        via-teal-800/80
+        to-purple-900/80 
+        shadow-md shadow-zinc-900/50
+        w-full md:w-[90%] max-w-[600px] 
+        min-h-[590px] 
+        mx-auto mt-2 mb-2 p-1 pb-10`
 
     return (
         <div className='
-            bg-zinc-900/30 
-            mt-20 mx-auto py-10 
+            
+            mt-20 mx-auto py-10  px-2
             w-full md:w-[90%]
             text-center'>
             <Swiper
