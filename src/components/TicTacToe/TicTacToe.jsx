@@ -55,8 +55,8 @@ export default function TicTacToe() {
     }
     
     return (
-        <article className='app-article' id='tic-tac-toe'>
-            <h3>Tic Tac Toe</h3>
+        <article className='app-article py-10' id='tic-tac-toe'>
+            <h3 className='font-[600]'>P1 vs P2</h3>
             <main className='board'>
                 <BoardSqures board={board} updateBoard={updateBoard} />
                 

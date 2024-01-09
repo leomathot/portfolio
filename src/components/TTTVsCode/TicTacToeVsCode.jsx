@@ -81,7 +81,7 @@ export default function TicTacToeVsCode() {
                 console.log(oSquares)
                 console.log(freeSquares)
                 console.log(rdmPlayIndex)
-            }, 500)
+            }, 800)
         }
     }
 
@@ -91,8 +91,8 @@ export default function TicTacToeVsCode() {
     // output
     
     return (
-        <article className='app-article' id='tic-tac-toe'>
-            <h3>Tic-Tac-Toe Vs Computer</h3>
+        <article className='app-article py-10' id='tic-tac-toe'>
+            <h3 className='font-[600]'>You vs Computer</h3>
             <main className='board'>
                 <BoardSqures board={board} updateBoard={turn === TURNS.X ? updateBoard : () => null} />
                 
