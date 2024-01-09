@@ -1,4 +1,5 @@
 import { Square } from "./TicTacToeSquare"
+import { TURNS } from "./TicTacToeConstants"
 
 export function BoardSqures({ board, updateBoard }) {
     return (
@@ -11,7 +12,12 @@ export function BoardSqures({ board, updateBoard }) {
                             index={index}
                             updateBoard={updateBoard}
                         >
-                            {sq}
+                            {
+                            sq === null ? null 
+                                : sq === TURNS.X 
+                                    ? <i class="fa-solid fa-x"></i> 
+                                    : <i class="fa-solid fa-o"></i> 
+                            }
                         </Square>
                     )
                 })
