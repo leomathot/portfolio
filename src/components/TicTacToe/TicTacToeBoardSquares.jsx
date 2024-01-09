@@ -2,7 +2,7 @@ import { Square } from "./TicTacToeSquare"
 
 export function BoardSqures({ board, updateBoard }) {
     return (
-        <section className="board-squares">
+        <div className="board-squares">
             {
                 board.map((sq, index) => {
                     return (
@@ -16,6 +16,6 @@ export function BoardSqures({ board, updateBoard }) {
                     )
                 })
             }
-        </section>
+        </div>
     )
 }

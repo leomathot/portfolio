@@ -71,21 +71,6 @@ ul {
 }
 
 /* tic-tac-toe */
-#tic-tac-toe button {
-  padding: 5px 10px;
-  background: transparent;
-  border: 2px solid #f0f0f0;
-  color: #f0f0f0;
-  transition: 0.3s;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-#tic-tac-toe button:hover {
-  background: #f0f0f0;
-  color: #303030;
-}
-
 #tic-tac-toe {
   height: 550px;
   display: flex;
@@ -148,12 +133,13 @@ ul {
   height: 50px;
   pointer-events: none;
   border-color: transparent;
+  background: transparent;
   font-size: 30px;
 }
 
 #tic-tac-toe .turn .is-selected {
-  color: #fff;
-  background: #347070;
+  /* background: rgba(0, 0, 0, 0.2); */
+  border: 2px solid #f0f0f0;
 }
 
 #tic-tac-toe .winner {
@@ -164,7 +150,7 @@ ul {
   left: 0;
   display: grid;
   place-items: center;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 #tic-tac-toe .winner .square {
@@ -177,7 +163,6 @@ ul {
 
 #tic-tac-toe .winner .text {
   background: #405090;
-  border: 2px solid #f0f0f0;
   height: 80%;
   width: 80%;
   display: flex;
@@ -185,6 +170,18 @@ ul {
   justify-content: center;
   align-items: center;
   gap: 80px;
+}
+
+#tic-tac-toe button {
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  color: #f0f0f0;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+#tic-tac-toe button:hover {
+  background: rgb(24, 24, 27);
 }
 
 /* contact form */

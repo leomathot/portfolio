@@ -7,6 +7,7 @@ import { WinnerModal } from './TicTacToeWinnerModal'
 import { saveGameToLocalStorage, resetGameLocalStorage } from './TicTacToeLocalStorage'
 
 export default function TicTacToe() {
+
     const [board, setBoard] = useState(() => {
         const boardFromLocalStorage = window.localStorage.getItem('board')
         return boardFromLocalStorage ? JSON.parse(boardFromLocalStorage) : Array(9).fill(null)
@@ -19,11 +20,14 @@ export default function TicTacToe() {
 
     const [winner, setWinner] = useState(null) // null => no winner, false => tie
 
+    const [start, setStart] = useState(TURNS.X)
+
+    const changeStart = () => setStart( start === TURNS.X ? TURNS.O : TURNS.X )
+
     const resetGame = () => {
         setBoard(Array(9).fill(null))
-        setTurn(TURNS.X)
+        setTurn(start)
         setWinner(null)
-
         resetGameLocalStorage()
     }
 
@@ -40,11 +44,13 @@ export default function TicTacToe() {
         // save in local storage
         saveGameToLocalStorage({board: newBoard, turn: newTurn})
         // check if there is a winner
-        const newWinner = checkWinner(newBoard)
+        const newWinner = checkWinner(newBoard) // returns X or O if any won or NULL if did not
         if (newWinner) {
             setWinner(newWinner)
+            changeStart()
         } else if (checkEndGame(newBoard)) {
             setWinner(false) // tie
+            changeStart()
         }
     }
     

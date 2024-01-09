@@ -5,10 +5,10 @@ export function Turn({ turn, resetGame }) {
     return (
         <section className="turn">
             <Square isSelected={turn === TURNS.X}>
-                {TURNS.X}
+                { <i class="fa-solid fa-x"></i> }
             </Square>
             <Square isSelected={turn === TURNS.O}>
-                {TURNS.O}
+                { <i class="fa-solid fa-o"></i> }
             </Square>
             <div>
                 <button onClick={resetGame}>Reset game</button>

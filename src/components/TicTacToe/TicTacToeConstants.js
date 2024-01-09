@@ -1,6 +1,7 @@
 export const TURNS = {
-    X: "✖",
-    O: "○"
+    X: '✖',
+    O: '○',
+    START: '✖'
 }
 
 export const WINNING_MOVES = [
