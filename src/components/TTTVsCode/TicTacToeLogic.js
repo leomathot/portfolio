@@ -8,10 +8,10 @@ export  const checkWinner = (boardToCheck) => {
             boardToCheck[a] === boardToCheck[b] &&
             boardToCheck[a] === boardToCheck[c]
         ) {
-            return boardToCheck[a]
+            return [boardToCheck[a], winningMove]
         }
     }
-    return null
+    return [null, null]
 }
 
 export const checkEndGame = (newBoard) => {

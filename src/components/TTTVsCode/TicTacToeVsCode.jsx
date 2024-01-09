@@ -50,9 +50,10 @@ export default function TicTacToeVsCode() {
         // save in local storage
         saveGameToLocalStorage({board: newBoard, turn: newTurn})
         // check if there is a winner
-        const newWinner = checkWinner(newBoard) // returns X or O if any won or NULL if did not
-        if (newWinner) {
-            setWinner(newWinner)
+        const newWinner = checkWinner(newBoard) // returns  or O if any won or NULL if did not
+        if (newWinner[0]) {
+            console.log('winner', newWinner[0], newWinner[1])
+            setWinner(newWinner[0])
             changeStart()
         } else if (checkEndGame(newBoard)) {
             setWinner(false) // tie
@@ -74,13 +75,14 @@ export default function TicTacToeVsCode() {
 
                 const rdmPlayIndex = freeSquares[Math.floor(Math.random() * freeSquares.length)] 
 
+                console.log('board', board)
+                console.log('x', xSquares)
+                console.log('o', oSquares)
+                console.log('free', freeSquares)
+                console.log('chosen', rdmPlayIndex)
+
                 updateBoard(rdmPlayIndex)
 
-                console.log(board)
-                console.log(xSquares)
-                console.log(oSquares)
-                console.log(freeSquares)
-                console.log(rdmPlayIndex)
             }, 800)
         }
     }
