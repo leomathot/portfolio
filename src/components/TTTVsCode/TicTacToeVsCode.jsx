@@ -8,20 +8,24 @@ import { saveGameToLocalStorage, resetGameLocalStorage } from './TicTacToeLocalS
 
 export default function TicTacToeVsCode() {
 
+    // borad [0,0,0,0,0,0,0,0,0]
     const [board, setBoard] = useState(() => {
         const boardFromLocalStorage = window.localStorage.getItem('board-vs-code')
         return boardFromLocalStorage ? JSON.parse(boardFromLocalStorage) : Array(9).fill(null)
     })
         
+    // 'x' or 'o'
     const [turn, setTurn] = useState(() => {
         const turnFromLocalStorage = window.localStorage.getItem('turn-vs-code')
         return turnFromLocalStorage ? JSON.parse(turnFromLocalStorage) : TURNS.X
     })
 
-    const [winner, setWinner] = useState(null) // null => no winner, false => tie
+    // null => no winner, false => tie
+    const [winner, setWinner] = useState(null) 
 
+    // who starts the round
     const [start, setStart] = useState(TURNS.O)
-
+    // flip the start
     const changeStart = () => setStart( start === TURNS.X ? TURNS.O : TURNS.X )
 
     const resetGame = () => {
@@ -60,25 +64,29 @@ export default function TicTacToeVsCode() {
 
     const codePlay = () => {
         if (turn === TURNS.O) {
-            const indexesArr = board.map((sq, idx) => idx);
-            const xSquares = indexesArr.filter(i => board[i] == 'x');
-            const oSquares = indexesArr.filter(i => board[i] == 'o');
+            setTimeout(() => {
+                const indexesArr = board.map((sq, idx) => idx);
+                const xSquares = indexesArr.filter(i => board[i] === 'x');
+                const oSquares = indexesArr.filter(i => board[i] === 'o');
 
-            const freeSquares = indexesArr.filter(indEl => 
-                !xSquares.includes(indEl) && !oSquares.includes(indEl))
+                const freeSquares = indexesArr.filter(indEl => 
+                    !xSquares.includes(indEl) && !oSquares.includes(indEl))
 
-            const rdmPlayIndex = freeSquares[Math.floor(Math.random() * freeSquares.length)] 
+                const rdmPlayIndex = freeSquares[Math.floor(Math.random() * freeSquares.length)] 
 
-            updateBoard(rdmPlayIndex)
+                updateBoard(rdmPlayIndex)
 
-            // console.log(board)
-            // console.log(xSquares)
-            // console.log(oSquares)
-            console.log(freeSquares)
-            console.log(rdmPlayIndex)
+                console.log(board)
+                console.log(xSquares)
+                console.log(oSquares)
+                console.log(freeSquares)
+                console.log(rdmPlayIndex)
+            }, 500)
         }
     }
+
     codePlay()
+
 
     // output
     
