@@ -13,7 +13,7 @@ export default function TicTacToeVsCode() {
         const boardFromLocalStorage = window.localStorage.getItem('board-vs-code')
         return boardFromLocalStorage ? JSON.parse(boardFromLocalStorage) : Array(9).fill(null)
     })
-        
+
     // 'x' or 'o'
     const [turn, setTurn] = useState(() => {
         const turnFromLocalStorage = window.localStorage.getItem('turn-vs-code')
@@ -21,12 +21,12 @@ export default function TicTacToeVsCode() {
     })
 
     // null => no winner, false => tie
-    const [winner, setWinner] = useState(null) 
+    const [winner, setWinner] = useState(null)
 
     // who starts the round
     const [start, setStart] = useState(TURNS.O)
     // flip the start
-    const changeStart = () => setStart( start === TURNS.X ? TURNS.O : TURNS.X )
+    const changeStart = () => setStart(start === TURNS.X ? TURNS.O : TURNS.X)
 
     const resetGame = () => {
         setBoard(Array(9).fill(null))
@@ -41,14 +41,14 @@ export default function TicTacToeVsCode() {
         // check if the square is empty
         if (board[index] || winner) return
         // if the square is empty, add the mark
-        const newBoard = [... board]
+        const newBoard = [...board]
         newBoard[index] = turn
         setBoard(newBoard)
         // if the mark is X, switch to O, and vice versa
         const newTurn = turn === TURNS.X ? TURNS.O : TURNS.X
         setTurn(newTurn)
         // save in local storage
-        saveGameToLocalStorage({board: newBoard, turn: newTurn})
+        saveGameToLocalStorage({ board: newBoard, turn: newTurn })
         // check if there is a winner
         const newWinner = checkWinner(newBoard) // returns  or O if any won or NULL if did not
         if (newWinner[0]) {
@@ -70,10 +70,10 @@ export default function TicTacToeVsCode() {
                 const xSquares = indexesArr.filter(i => board[i] === 'x');
                 const oSquares = indexesArr.filter(i => board[i] === 'o');
 
-                const freeSquares = indexesArr.filter(indEl => 
+                const freeSquares = indexesArr.filter(indEl =>
                     !xSquares.includes(indEl) && !oSquares.includes(indEl))
 
-                const rdmPlayIndex = freeSquares[Math.floor(Math.random() * freeSquares.length)] 
+                const rdmPlayIndex = freeSquares[Math.floor(Math.random() * freeSquares.length)]
 
                 console.log('board', board)
                 console.log('x', xSquares)
@@ -91,17 +91,28 @@ export default function TicTacToeVsCode() {
 
 
     // output
-    
+
     return (
         <article className='app-article py-10' id='tic-tac-toe'>
-            <h3 className='font-[600]'>You vs Computer</h3>
-            <main className='board'>
+            <h3 className='font-[600] mb-3'>Tic Tac Toe</h3>
+            <div className='flex items-center gap-6 text-zinc-300 font-[600]'>
+                <div className='flex flex-col gap-2 bg-zinc-900/20 py-3 w-24 text-sm'>
+                    <i className='fa-solid fa-face-smile text-cyan-300'></i>You
+                </div>
+                <div>
+                    vs
+                </div>
+                <div className='flex flex-col gap-2 bg-zinc-900/20 py-3 w-24 text-sm'>
+                    <i className='fa-solid fa-robot text-cyan-300'></i> Computer
+                </div>
+            </div>
+            <div className='board'>
                 <BoardSqures board={board} updateBoard={turn === TURNS.X ? updateBoard : () => null} />
-                
+
                 <Turn turn={turn} resetGame={resetGame} />
 
                 <WinnerModal winner={winner} resetGame={resetGame} />
-            </main>
+            </div>
         </article>
     )
 }
