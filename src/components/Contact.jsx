@@ -15,9 +15,9 @@ const Contact = () => {
             w-[95%] max-w-[500px] mx-auto mt-10 
             shadow-md shadow-zinc-900/50
             bg-gradient-to-br
-            from-cyan-900/90 
-            via-purple-900/40
-            to-teal-900/80'
+            from-sky-800/70 
+            via-purple-900/70
+            to-teal-800/70'
         >
 
           <label htmlFor='name'>Name</label>

@@ -12,7 +12,7 @@ const ProjectsSwiper = () => {
     const swiperSlideContClass = `
         bg-gradient-to-br
         from-teal-800/70
-        via-purple-900/50 
+        via-purple-900/70 
         to-sky-800/70
         shadow-md shadow-zinc-900/50
         w-full md:w-[90%] max-w-[600px] 
