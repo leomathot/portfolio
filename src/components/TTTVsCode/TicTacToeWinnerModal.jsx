@@ -9,7 +9,11 @@ export function WinnerModal({ winner, resetGame }) {
             <div className="text">
                 <div>
                     {
-                        winner && <Square>{winner}</Square>
+                        winner  && 
+                            <Square>{winner === "x" 
+                                ? <i class="fa-solid fa-x"></i> 
+                                : <i class="fa-solid fa-o"></i>}
+                            </Square>
                     }
                     <h2>
                         {winnerText}
