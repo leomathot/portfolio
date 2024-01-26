@@ -103,7 +103,7 @@ ul {
 #tic-tac-toe .square {
   width: 80px;
   height: 80px;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.4);
   display: grid;
   place-items: center;
   cursor: pointer;
