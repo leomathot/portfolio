@@ -61,7 +61,7 @@ const About = () => {
             </div>
 
             {/* hero */}
-            <div className='group/hero min-h-screen md:min-h-[60vh] 
+            <div className='min-h-screen md:min-h-[60vh] 
                 flex justify-center align-bottom items-center 
                 bg-gradient-to-b 
                 from-transparent
@@ -71,11 +71,9 @@ const About = () => {
 
                     <h1 className='text-2xl text-cyan-400 ml-[-28px] mb-2.5'>
                         <i className='fa-solid fa-chevron-right 
-                        text-base text-zinc-50 mr-4 relative bottom-0.5 
-                        group-hover/hero:text-cyan-400 duration-200'
+                        text-base mr-4 relative bottom-0.5'
                         />
-                        <span className='group-hover/hero:text-zinc-50 duration-200'
-                        >Leo</span>nardo Mathot
+                        <span className='text-zinc-100'>Leo</span>nardo Mathot
                     </h1>
 
                     <h2 className='text-zinc-300 mb-4'>Front End Developer</h2>

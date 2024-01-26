@@ -84,7 +84,7 @@ export default function TicTacToeVsCode() {
                 const userWinningLines = possibleLinesX.filter(line => 
                     line.filter(idx => board[idx] === "x").length === 2);
     
-                let move;
+                let move = null;
                 // If computer is about to win, play the winning move
                 if (computerWinningLines.length > 0) {
                     const computerWinningLine = computerWinningLines[0];
@@ -114,7 +114,6 @@ export default function TicTacToeVsCode() {
                         // If no prioritized lines, select a random line
                         selectedLine = possibleLinesO[Math.floor(Math.random() * possibleLinesO.length)];
                     }
-    
                     move = selectedLine.find(idx => board[idx] === null);
                 } else {
                     // Otherwise, make a random move

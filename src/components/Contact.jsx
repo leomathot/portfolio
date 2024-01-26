@@ -16,7 +16,7 @@ const Contact = () => {
             shadow-md shadow-zinc-900/50
             bg-gradient-to-br
             from-sky-800/70 
-            via-purple-900/70
+            via-purple-900/60
             to-teal-800/70'
         >
 
