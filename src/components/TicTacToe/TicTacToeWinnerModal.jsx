@@ -1,6 +1,6 @@
 import { Square } from "./TicTacToeSquare"
 
-export function WinnerModal({ winner, resetGame }) {
+export function WinnerModal({ winner, clearBoard }) {
     if (winner === null) return null
     const winnerText = winner === false ? "Tie!" : "wins!"
 
@@ -19,7 +19,7 @@ export function WinnerModal({ winner, resetGame }) {
                         {winnerText}
                     </h2>
                 </div>
-                <button onClick={resetGame}>Play again</button>
+                <button onClick={clearBoard}>Play again</button>
             </div>
         </section>
     )

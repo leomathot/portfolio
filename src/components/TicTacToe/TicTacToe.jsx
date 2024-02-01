@@ -4,21 +4,27 @@ import { Turn } from './TicTacToeTurn'
 import { TURNS, WINNING_MOVES } from './TicTacToeConstants'
 import { checkWinner, checkEndGame } from './TicTacToeLogic'
 import { WinnerModal } from './TicTacToeWinnerModal'
-import { saveGameToLocalStorage, resetGameLocalStorage } from './TicTacToeLocalStorage'
+import { saveGameToLocalStorage, clearBoardLocalStorage, reset } from './TicTacToeLocalStorage'
 
 export default function TicTacToeVsCode() {
 
     const indexesArr = [0, 1, 2, 3, 4, 5, 6, 7, 8]
     // borad [0,0,0,0,0,0,0,0,0]
     const [board, setBoard] = useState(() => {
-        const boardFromLocalStorage = window.localStorage.getItem('board-vs-code')
+        const boardFromLocalStorage = window.localStorage.getItem('board')
         return boardFromLocalStorage ? JSON.parse(boardFromLocalStorage) : Array(9).fill(null)
     })
 
     // 'x' or 'o'
     const [turn, setTurn] = useState(() => {
-        const turnFromLocalStorage = window.localStorage.getItem('turn-vs-code')
+        const turnFromLocalStorage = window.localStorage.getItem('turn')
         return turnFromLocalStorage ? JSON.parse(turnFromLocalStorage) : TURNS.X
+    })
+
+    // score
+    const [score, setScore] = useState(() => {
+        const scoreFromLocalStorage = window.localStorage.getItem('score')
+        return scoreFromLocalStorage ? JSON.parse(scoreFromLocalStorage) : [0,0,0]
     })
 
     // null => no winner, false => tie
@@ -29,11 +35,20 @@ export default function TicTacToeVsCode() {
     // flip the start
     const changeStart = () => setStart(start === TURNS.X ? TURNS.O : TURNS.X)
 
-    const resetGame = () => {
-        setBoard(Array(9).fill(null))
-        setTurn(start)
+    const clearBoard = () => {
+        setBoard(Array(9).fill(null)) // clear board
+        setTurn(start) // set turn to the starting one for this game
         setWinner(null)
-        resetGameLocalStorage()
+        clearBoardLocalStorage() // remove board and turn from localstorage
+    }
+
+    const reset = () => {
+        setBoard(Array(9).fill(null)) // clear board
+        setTurn(start) // set turn to the starting one for this game
+        setWinner(null)
+        clearBoardLocalStorage() // remove board and turn from localstorage
+        setScore([0,0,0])
+        clearScore()
     }
 
     // original click handler --> user has to play
@@ -48,17 +63,28 @@ export default function TicTacToeVsCode() {
         // if the mark is X, switch to O, and vice versa
         const newTurn = turn === TURNS.X ? TURNS.O : TURNS.X
         setTurn(newTurn)
-        // save in local storage
-        saveGameToLocalStorage({ board: newBoard, turn: newTurn })
         // check if there is a winner
-        const newWinner = checkWinner(newBoard) // returns  or O if any won or NULL if did not
+        const newWinner = checkWinner(newBoard) // returns x or o if any won or NULL if did not
         if (newWinner[0]) {
             setWinner(newWinner[0])
+            const newScore = [...score]
+            if (newWinner[0] == 'x') {
+                newScore[0] = newScore[0] + 1
+            } else {
+                newScore[2] = newScore[2] + 1
+            }
+            setScore(newScore)
             changeStart()
+        // check if the board is full
         } else if (checkEndGame(newBoard)) {
             setWinner(false) // tie
+            const newScore = [...score]
+            newScore[1] = newScore[1] + 1
+            setScore(newScore)
             changeStart()
         }
+        // save in local storage
+        saveGameToLocalStorage({ board: newBoard, turn: newTurn, score: score })
     }
 
     // computer has to play
@@ -146,12 +172,18 @@ export default function TicTacToeVsCode() {
                 </div>
             </div>
 
+            <div className='flex justify-between w-[220px]'>
+                <div className='font-[600] text-lg text-cyan-300'>{score[0]}</div>
+                <div className='text-zinc-300'>{score[1]} ties</div>
+                <div className='font-[600] text-lg text-cyan-300'>{score[2]}</div>
+            </div>
+
             <div className='board'>
                 <BoardSqures board={board} updateBoard={turn === TURNS.X ? updateBoard : () => null} />
 
-                <Turn turn={turn} resetGame={resetGame} />
+                <Turn turn={turn} clearBoard={clearBoard} reset={reset}/>
 
-                <WinnerModal winner={winner} resetGame={resetGame} />
+                <WinnerModal winner={winner} clearBoard={clearBoard} />
             </div>
         </article>
     )

@@ -1,7 +1,7 @@
 import { TURNS } from "./TicTacToeConstants"
 import { Square } from "./TicTacToeSquare"
 
-export function Turn({ turn, resetGame }) {
+export function Turn({ turn, clearBoard, reset }) {
     return (
         <section className="turn">
             <Square isSelected={turn === TURNS.X}>
@@ -11,7 +11,10 @@ export function Turn({ turn, resetGame }) {
                 { <i class="fa-solid fa-o"></i> }
             </Square>
             <div>
-                <button onClick={resetGame}>Reset game</button>
+                <button onClick={clearBoard}>Clear</button>
+            </div>
+            <div>
+                <button onClick={reset}>Reset</button>
             </div>
         </section>
     )

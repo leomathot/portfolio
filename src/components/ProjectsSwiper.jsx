@@ -1,7 +1,7 @@
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination } from 'swiper/modules'
-import TicTacToeVsCode from './TTTVsCode/TicTacToeVsCode'
+import TicTacToe from './TicTacToe/TicTacToe'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
@@ -39,7 +39,7 @@ const ProjectsSwiper = () => {
             >
                 <SwiperSlide>
                     <div className={swiperSlideContClass}>
-                        <TicTacToeVsCode/>
+                        <TicTacToe/>
                     </div>
                 </SwiperSlide>
 
