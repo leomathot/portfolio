@@ -80,7 +80,6 @@ export default function TicTacToeVsCode() {
             setWinner("t") // tie
             newScore[1] = newScore[1] + 1
             setScore(newScore)
-            console.log("tie", "score", score, "newScore", newScore)
             changeStart()
         }
         // save in local storage
@@ -161,21 +160,18 @@ export default function TicTacToeVsCode() {
             <h3 className="font-[600] mb-3">Tic Tac Toe</h3>
 
             <div className="flex items-center w-[276px] justify-between gap-1 text-zinc-300 font-[600]">
-                <div className="flex gap-2 justify-center bg-zinc-900/20 py-1 px-3 w-28 text-sm text-cyan-300">
-                    <span>You</span>
+                <div className="bg-zinc-900/20 py-2 px-2 w-24 text-sm text-cyan-300">
+                    <div>You</div>
+                    <div className="mt-2 text-xl">{score[0]}</div>
                 </div>
                 <div>
-                    vs
+                    <div>Ties</div>
+                    <div>{score[1]}</div>
                 </div>
-                <div className="flex gap-2 justify-center bg-zinc-900/20 py-1 px-3 w-28 text-sm text-cyan-300">
-                    <span>Computer</span>
+                <div className="bg-zinc-900/20 py-2 px-2 w-24 text-sm text-cyan-300">
+                    <div>Computer</div>
+                    <div className="mt-2 text-xl">{score[2]}</div>
                 </div>
-            </div>
-
-            <div className="flex justify-between w-[220px]">
-                <div className="font-[600] text-lg text-cyan-300">{score[0]}</div>
-                <div className="text-zinc-300">{score[1]} ties</div>
-                <div className="font-[600] text-lg text-cyan-300">{score[2]}</div>
             </div>
 
             <div className="board">

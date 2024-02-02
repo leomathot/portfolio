@@ -6,7 +6,11 @@ export function WinnerModal({ winner, clearBoard }) {
 
     return (
         <section className="winner">
-            <div className="text">
+            <div className="text 
+                bg-gradient-to-br 
+                from-teal-800 
+                via-purple-900/95 
+                to-sky-800">
                 <div>
                     {
                         (winner === "x" || winner === "o")  && 
