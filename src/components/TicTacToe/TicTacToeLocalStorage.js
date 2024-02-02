@@ -9,6 +9,6 @@ export const clearBoardLocalStorage = () => {
     window.localStorage.removeItem('turn')
 }
 
-export const reset = () => {
+export const clearScoreLocalStorage = () => {
     window.localStorage.removeItem('score')
 }

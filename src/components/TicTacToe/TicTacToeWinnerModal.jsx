@@ -2,14 +2,14 @@ import { Square } from "./TicTacToeSquare"
 
 export function WinnerModal({ winner, clearBoard }) {
     if (winner === null) return null
-    const winnerText = winner === false ? "Tie!" : "wins!"
+    const winnerText = winner === "t" ? "Tie!" : "wins!"
 
     return (
         <section className="winner">
             <div className="text">
                 <div>
                     {
-                        winner  && 
+                        (winner === "x" || winner === "o")  && 
                             <Square>{winner === "x" 
                                 ? <i class="fa-solid fa-x"></i> 
                                 : <i class="fa-solid fa-o"></i>}
