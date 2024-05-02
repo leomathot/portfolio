@@ -23,7 +23,7 @@
 
 }
 
-.bg-bottom {
+.bg-shadow {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -39,11 +39,13 @@
       rgba(24,24,27,0.1),
       rgba(24,24,27,0.3),
       rgba(24,24,27,0.7)
-    ),
+    )
+    /* ,
     linear-gradient(
       var(--bluish-green),
       var(--bluish-green)
-    );
+    ) */
+    ;
 }
 
 .grad-cont {
