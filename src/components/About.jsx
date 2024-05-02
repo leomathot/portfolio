@@ -1,53 +1,7 @@
-import React, { useState, useEffect } from 'react'
-import { useReducedMotion } from '../hooks/useReducedMotion'
+
 
 const About = () => {
-    const [gradientValues, setGradientValues] = useState({
-        tran1: 0,
-        tran2: 10,
-        col1: 10,
-        tran3: 13,
-        tran4: 50
-    });
-    let isReducedMotion = useReducedMotion()
-
-    useEffect(() => {
-
-        if (!isReducedMotion) {
-            const interval = setInterval(() => {
-                if (gradientValues.tran1 >= 50) {
-                    setGradientValues({
-                        tran1: 0,
-                        tran2: 10,
-                        col1: 10,
-                        tran3: 13,
-                        tran4: 50
-                    })
-                } else {
-                    setGradientValues({
-                        ...gradientValues,
-                        tran1: gradientValues.tran1 + 0.25,
-                        tran2: gradientValues.tran2 + 0.25,
-                        col1: gradientValues.col1 + 0.25,
-                        tran3: gradientValues.tran3 + 0.25,
-                        tran4: gradientValues.tran4 + 0.25,
-                    })
-                }
-            }, 10)
-            return () => clearInterval(interval)
-        }
-    }, [gradientValues, isReducedMotion])
-
-    function getGradientString(gradientValues) {
-        return `repeating-radial-gradient( 
-          circle at 0 100%, 
-          transparent ${gradientValues.tran1}px,
-          transparent ${gradientValues.tran2}px,
-          #022 ${gradientValues.col1}px, 
-          transparent ${gradientValues.tran3}px, 
-          transparent ${gradientValues.tran4}px
-          )`
-    }
+    
 
     return (
         <section id='about' className='relative'>
@@ -55,9 +9,6 @@ const About = () => {
             {/* page bacground */}
             <div className='w-full h-screen fixed top-0 overflow-hidden -z-30'>
                 <div className='bg-bottom -z-30'></div> {/* uses css */}
-                <div className='grad-cont -z-20'
-                    style={{ background: getGradientString(gradientValues) }}>
-                </div> {/* uses css */}
             </div>
 
             {/* hero */}
