@@ -10,9 +10,11 @@ const About = () => {
             <div className='w-full h-screen fixed top-0 overflow-hidden -z-30'>
                 <div className='bg-shadow -z-30'></div> {/* uses css */}
             </div>
-            <div className="bg-gradient-to-b 
-                from-teal-900 
-                to-sky-900 
+            <div className="
+                bg-gradient-to-br 
+                from-teal-900
+                via-sky-900
+                to-sky-950 
                 fixed -z-40 w-full h-full top-0"></div>
 
             {/* hero */}
